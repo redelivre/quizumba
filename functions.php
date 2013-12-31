@@ -63,11 +63,22 @@ add_action( 'after_setup_theme', 'quizumba_setup' );
 function quizumba_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'quizumba' ),
-		'id'            => 'sidebar-1',
+		'id'            => 'sidebar-main',
+		'description'	=> __( 'The main sidebar', 'quizumba' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Footer Widget Area', 'quizumba' ),
+		'id'            => 'sidebar-footer',
+		'description'	=> __( 'The widget area on the footer', 'quizumba' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 }
 add_action( 'widgets_init', 'quizumba_widgets_init' );

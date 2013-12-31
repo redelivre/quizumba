@@ -11,6 +11,11 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+		<?php if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
+	        <div id="tertiary" class="widget-area widget-area--footer clear" role="complementary">
+	                <?php dynamic_sidebar( 'sidebar-footer' ); ?>
+	        </div><!-- .widget-area--footer -->
+        <?php endif; ?>
 		<div class="site-info">
 			<?php do_action( 'quizumba_credits' ); ?>
 			<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 'quizumba' ), 'WordPress' ); ?></a>
