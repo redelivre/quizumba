@@ -87,6 +87,12 @@ add_action( 'widgets_init', 'quizumba_widgets_init' );
  * Enqueue scripts and styles.
  */
 function quizumba_scripts() {
+
+	// Normalize.css
+    wp_register_style( 'quizumba-normalize', get_template_directory_uri() . '/css/normalize.css', array(), '2.1.3' );
+    wp_enqueue_style( 'quizumba-normalize' );
+
+    // Main style
 	wp_enqueue_style( 'quizumba-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'quizumba-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
