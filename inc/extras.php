@@ -31,6 +31,14 @@ function quizumba_body_classes( $classes ) {
 		$classes[] = 'group-blog';
 	}
 
+	if ( is_singular() ) {
+		$classes[] = 'singular';
+	}
+
+	if ( ! is_home() ) {
+		$classes[] = 'internal';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'quizumba_body_classes' );
