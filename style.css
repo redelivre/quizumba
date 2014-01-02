@@ -616,8 +616,12 @@ object {
         float: left;
     }
 
-    .internal .content-area {
+    .content-area {
     	width: 62%;
+    }
+
+    .full-width .content-area {
+    	width: 100%;
     }
 
     .widget-area--sidebar {
