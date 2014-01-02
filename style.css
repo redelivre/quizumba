@@ -14,13 +14,37 @@ Tags:
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
- Quizumba is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
-
-Resetting and rebuilding styles have been helped along thanks to the fine work of
-Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
-along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-and Blueprint http://www.blueprintcss.org/
+Quizumba is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
 */
+
+/* ==========================================================================
+   Table of contents
+   ==========================================================================
+
+    1.0 - Global styles
+    2.0 - Basic structure
+    3.0 - Header
+        3.1 - Site header
+        3.2 - Main navigation
+    4.0 - Content
+        4.1 - Entry header
+        4.2 - Entry meta
+        4.3 - Entry content
+        4.4 - Media
+        4.5 - Post formats
+        4.6 - Attachments
+        4.7 - Post / page navigation
+        4.8 - Author bio
+        4.9 - Archives
+        4.10 - Search results / No posts
+        4.11 - 404
+        4.12 - Comments
+        4.13 - Multisite
+    5.0 - Widget area
+    6.0 - Footer
+    7.0 - Events / Agenda
+    8.0 - Media queries 
+ */
 
 
 /* ==========================================================================
@@ -46,6 +70,10 @@ textarea {
 	font-family: sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
+}
+
+html {
+	background: #fff;
 }
 
 /* Headings */
@@ -306,6 +334,8 @@ a:active {
 /* Clearing */
 .clear:before,
 .clear:after,
+.container:before,
+.container:after,
 .entry-content:before,
 .entry-content:after,
 .comment-content:before,
@@ -321,6 +351,7 @@ a:active {
 }
 
 .clear:after,
+.container:after,
 .entry-content:after,
 .comment-content:after,
 .site-header:after,
@@ -329,9 +360,32 @@ a:active {
 	clear: both;
 }
 
+/* ==========================================================================
+   2.0 - Basic structure
+   ========================================================================== */
 
-/* =Menu
------------------------------------------------ */
+.site-header,
+.site-footer {
+	background: #222;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1100px;
+	padding: 1em;
+}
+
+.site-header {
+	text-align: center;
+}
+
+/* ==========================================================================
+   3.0 - Header
+   ========================================================================== */
+
+/* ==========================================================================
+   3.2 - Main navigation
+   ========================================================================== */
 
 .main-navigation {
 	clear: both;
@@ -548,4 +602,25 @@ object {
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
 .infinity-end.neverending .site-footer {
 	display: block;
+}
+
+/* ==========================================================================
+   8.0 - Media queries
+   ========================================================================== */
+
+@media all and (min-width: 50em) {
+
+	/* Main content area + sidebar area */
+    .content-area,
+    .widget-area--sidebar {
+        float: left;
+    }
+
+    .internal .content-area {
+    	width: 62%;
+    }
+
+    .widget-area--sidebar {
+    	width: 38%;
+    }
 }
