@@ -1,43 +1,22 @@
-_s
-===
+# Quizumba
+O tema de mídia livre, focado em organizações que possuam conteúdo vasto em diferentes formatos.
 
-Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Alguns recursos:
+* Design responsivo; o site se comporta suavemente em diferentes dispositivos dos mais variados tamanhos e resoluções
+* Possibilidade de adicionar logo personalizada
+* Possibilidade de adicionar uma imagem de fundo para o cabeçalho do site e para o rodapé
+* Escolha da cor dos links e outros pequenos destaques
+* Escolha de cor ou imagem para o fundo do site
 
-My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
 
-* A just right amount of lean, well-commented, modern, HTML5 templates.
-* A helpful 404 template.
-* A sample custom header implementation in `inc/custom-header.php` that can be activated by uncommenting one line in functions.php and adding the code snippet found the comments of `inc/custom-header.php` to your `header.php` template.
-* Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
-* Some small tweaks in `inc/extras.php` that can improve your theming experience.
-* A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
-* 2 sample CSS layouts in `layouts` for a sidebar on either side of your content.
-* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
-* Licensed under GPLv2 or later. :) Use it to make something cool.
+## Como contribuir
+Há, basicamente, três formas:
 
-Getting Started
----------------
+1. Usando o canal de participação [Dev Rede Livre](http://dev.redelivre.org.br/category/rede-livre/temas-rede-livre/quizumba). Nele serão discutidas todas as ideias acerca do tema. Participe e deixe sua opinião!
+2. Através dos [*issues*](https://github.com/redelivre/quizumba/issues) (incidentes) do GitHub, é possível contribuir rapidamente. Informe sobre um erro, faça sugestões ou tire dúvidas sobre a funcionalidade de algum elemento.
+3. Para contribuir com códigos e novas funcionalidades, é necessário clicar no botão *Fork*, criar um *branch*, arrumar o código e fazer um *pull request*. Leia mais sobre [como colaborar dentro do GitHub](https://help.github.com/categories/63/articles) (em inglês).
 
-If you want to keep it simple, head over to http://underscores.me and generate your `_s` based theme from there. You just input the name of the theme you want to create, click the "Generate" button, and you get your ready-to-awesomize starter theme.
-
-If you want to set things up manually, download `_s` from github. The first thing you want to do is copy the `_s` directory and change the name to something else - Like, say, `megatherium` - then you'll need to do a five-step find and replace on the name in all the templates.
-
-1. Search for `'_s'` (inside single quotations) to capture the text domain.
-2. Search for `_s_` to capture all the function names.
-3. Search for <code>&nbsp;_s</code> (with a space before it) to capture DocBlocks.
-4. Search for `_s-` to capture prefixed handles.
-5. Search for `Text Domain: _s` in style.css.
-
-OR
-
-* Search for: `'_s'` and replace with: `'megatherium'`
-* Search for: `_s_` and replace with: `megatherium_`
-* Search for: <code>&nbsp;_s</code> and replace with: <code>&nbsp;Megatherium</code>
-* Search for: `_s-` and replace with: `megatherium-`
-* Search for: `Text Domain: _s` and replace with: `Text Domain: megatherium` in style.css.
-
-Then, update the stylesheet header in style.css and the links in footer.php with your own information. Next, update or delete this readme.
-
-Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
-
-Good luck!
+## Agradecimentos e referências
+* [Underscores](http://underscores.me)
+* [Normalize.css](http://necolas.github.io/normalize.css/)
+* [HTML5 Boilerplate](http://html5boilerplate.com/)
