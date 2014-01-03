@@ -39,6 +39,10 @@ function quizumba_body_classes( $classes ) {
 		$classes[] = 'full-width';
 	}
 
+	if ( quizumba_uses_masonry() ) {
+		$classes[] = 'masonry-on';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'quizumba_body_classes' );
