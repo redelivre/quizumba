@@ -17,6 +17,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 Quizumba is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
 */
 
+
+
+/* ==========================================================================
+   Colors
+   ==========================================================================
+   Orange: #d4802c
+
 /* ==========================================================================
    Table of contents
    ==========================================================================
@@ -276,15 +283,18 @@ textarea {
 
 /* Links */
 a {
-	color: royalblue;
+	color: #d4802c;
+	text-decoration: none;
 }
+
 a:visited {
-	color: purple;
+	color: #d4802c;
 }
+
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: #d4802c;
 }
 
 /* Alignment */
@@ -383,7 +393,15 @@ a:active {
    3.0 - Header
    ========================================================================== */
 
-/* ==========================================================================
+/*
+   3.1 - Site header
+   ========================================================================== */
+
+.site-header {
+	border-bottom: 1.5em solid #d4802c;
+}
+
+/*
    3.2 - Main navigation
    ========================================================================== */
 
@@ -454,15 +472,27 @@ a:active {
 	}
 }
 
+/* ==========================================================================
+   4.0 - Content
+   ========================================================================== */
 
-/* =Content
------------------------------------------------ */
+/* Masonry stuff */
+.js-masonry .grid-sizer,
+.js-masonry .hentry {
+	border-color: #ebebeb;
+	border-style: solid;
+	border-width: 1px 0 0;
+	padding: 1em;
+	width: 100%;
+}
 
 .sticky {
 }
+
 .hentry {
 	margin: 0 0 1.5em;
 }
+
 .byline,
 .updated {
 	display: none;
@@ -605,10 +635,32 @@ object {
 }
 
 /* ==========================================================================
+   6.0 - Footer
+   ========================================================================== */
+
+.site-footer {
+	border-bottom: 1.5em solid #d4802c;
+}
+
+/* ==========================================================================
    8.0 - Media queries
    ========================================================================== */
 
-@media all and (min-width: 50em) {
+@media all and (min-width: 40em) {
+	/* Masonry stuff */
+	.js-masonry .grid-sizer,
+	.js-masonry .hentry {
+		width: 50%;
+	}
+}
+
+@media all and (min-width: 55em) {
+
+	/* Masonry stuff */
+	.js-masonry .grid-sizer,
+	.js-masonry .hentry {
+		width: 33.333%;
+	}
 
 	/* Main content area + sidebar area */
     .content-area,
