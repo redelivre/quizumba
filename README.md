@@ -20,3 +20,5 @@ Há, basicamente, três formas:
 * [Underscores](http://underscores.me)
 * [Normalize.css](http://necolas.github.io/normalize.css/)
 * [HTML5 Boilerplate](http://html5boilerplate.com/)
+* [Masonry](http://masonry.desandro.com/)
+* [imagesLoaded](http://imagesloaded.desandro.com)
