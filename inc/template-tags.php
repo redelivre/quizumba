@@ -7,6 +7,20 @@
  * @package Quizumba
  */
 
+/**
+ * Check if the page is intended to use Masonry
+ * 
+ * @return bool Whether the page is intended to use Masonry or not
+ */
+function quizumba_uses_masonry() {
+	if ( is_home() || is_search() || is_archive() || is_post_type_archive() ) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
 if ( ! function_exists( 'quizumba_paging_nav' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.

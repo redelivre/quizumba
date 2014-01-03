@@ -95,10 +95,22 @@ function quizumba_scripts() {
     // Main style
 	wp_enqueue_style( 'quizumba-style', get_stylesheet_uri() );
 
+	// Navigation
 	wp_enqueue_script( 'quizumba-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
+	// Masonry
+	if ( quizumba_uses_masonry() ) {
+		wp_enqueue_script('quizumba-images-loaded', get_template_directory_uri().'/js/imagesloaded.pkgd.min.js', false, '3.1.1', true);
+		wp_enqueue_script( 'quizumba-masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array( 'quizumba-images-loaded' ), '3.1.3', true );
+	}
+
+   	// Loads JavaScript file with functionality specific to Quizumba
+    wp_enqueue_script( 'quizumba-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '', true );
+
+	// Skip link
 	wp_enqueue_script( 'quizumba-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
+	// Comment reply
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

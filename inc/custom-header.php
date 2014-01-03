@@ -26,11 +26,16 @@
  */
 function quizumba_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'quizumba_custom_header_args', array(
+
+		// Text color & image
 		'default-image'          => '',
 		'default-text-color'     => '000000',
-		'width'                  => 1000,
+
+		// Set height and width, with a maximum value for the width
+		'width'                  => 1600,
 		'height'                 => 250,
-		'flex-height'            => true,
+
+		// Callbacks for styling the header and the admin preview
 		'wp-head-callback'       => 'quizumba_header_style',
 		'admin-head-callback'    => 'quizumba_admin_header_style',
 		'admin-preview-callback' => 'quizumba_admin_header_image',
