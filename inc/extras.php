@@ -35,12 +35,8 @@ function quizumba_body_classes( $classes ) {
 		$classes[] = 'singular';
 	}
 
-	if ( is_home() || is_search() || is_archive() || is_404() || is_post_type_archive() ) {
-		$classes[] = 'full-width';
-	}
-
 	if ( quizumba_page_uses_masonry() ) {
-		$classes[] = 'masonry-on';
+		$classes[] = 'full-width';
 	}
 
 	return $classes;

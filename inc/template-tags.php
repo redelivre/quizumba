@@ -214,7 +214,7 @@ function quizumba_the_post_format() {
 
 	if ( $format ) { ?>
 		<div class="entry-meta entry-meta--format">
-			<?php echo $format; ?>
+			<?php echo get_post_format_string( $format ); ?>
 		</div><!-- .entry-meta--format -->
 	<?php
 	}

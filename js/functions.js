@@ -4,9 +4,9 @@
  * Provides helper functions to enhance the theme experience.
  */
 
-jQuery( document ).ready(function() {
+jQuery( document ).ready( function() {
 
-    var $container = jQuery('.masonry-on .loop');
+    var $container = jQuery('.js-masonry');
 
     // Masonry
     $container.imagesLoaded( function() {
@@ -14,7 +14,6 @@ jQuery( document ).ready(function() {
             itemSelector: '.hentry',
             columnWidth: '.hentry',
             gutterWidth: 10,
-
         } );
     } );
 
