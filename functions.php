@@ -9,7 +9,7 @@
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
+	$content_width = 642; /* pixels */
 }
 
 if ( ! function_exists( 'quizumba_setup' ) ) :
@@ -39,6 +39,8 @@ function quizumba_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
+	add_image_size( 'archive', 362, 9999 );
+	add_image_size( 'singular', 642, 380, false );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
