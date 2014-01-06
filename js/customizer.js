@@ -33,4 +33,13 @@
 			}
 		} );
 	} );
+	// Link color
+    wp.customize( 'quizumba_link_color', function( value ) {
+        value.bind( function( to ) {
+        	console.log(to);
+            $( 'a' ).css( 'color', to );
+            $( '.site-header' ).css( 'border-color', to );
+            $( '.site-footer' ).css( 'border-color', to );
+        } );
+    } );
 } )( jQuery );
