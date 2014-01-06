@@ -12,9 +12,75 @@
  */
 function quizumba_customize_register( $wp_customize ) {
 
+    /**
+     * Customize Image Reloaded Class
+     *
+     * Extend WP_Customize_Image_Control allowing access to uploads made within
+     * the same context
+     * 
+     */
+    class My_Customize_Image_Reloaded_Control extends WP_Customize_Image_Control {
+        /**
+         * Constructor.
+         *
+         * @since 3.4.0
+         * @uses WP_Customize_Image_Control::__construct()
+         *
+         * @param WP_Customize_Manager $manager
+         */
+        public function __construct( $manager, $id, $args = array() ) {
+                parent::__construct( $manager, $id, $args );
+        }
+        
+        /**
+        * Search for images within the defined context
+        * If there's no context, it'll bring all images from the library
+        * 
+        */
+        public function tab_uploaded() {
+            $my_context_uploads = get_posts( array(
+                'post_type'  => 'attachment',
+                'meta_key'   => '_wp_attachment_context',
+                'meta_value' => $this->context,
+                'orderby'    => 'post_date',
+                'nopaging'   => true,
+            ) );
+            
+            ?>
+            
+            <div class="uploaded-target"></div>
+            
+            <?php
+            if ( empty( $my_context_uploads ) )
+                return;
+            
+            foreach ( (array) $my_context_uploads as $my_context_upload ) {
+                $this->print_tab_image( esc_url_raw( $my_context_upload->guid ) );
+            }
+        }
+    }
+
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
+    // Branding section
+    $wp_customize->add_section( 'quizumba_branding', array(
+            'title'    => __( 'Branding', 'quizumba' ),
+            'priority' => 30,
+    ) );
+    
+    // Branding section: logo uploader
+    $wp_customize->add_setting( 'quizumba_logo', array(
+            'capability'  => 'edit_theme_options'
+    ) );
+        
+    $wp_customize->add_control( new My_Customize_Image_Reloaded_Control( $wp_customize, 'quizumba_logo', array(
+        'label'     => __( 'Logo', 'quizumba' ),
+        'section'   => 'quizumba_branding',
+        'settings'  => 'quizumba_logo',
+        'context'   => 'quizumba-custom-logo'
+    ) ) );
 
 
 	// Color section: link color
@@ -118,3 +184,26 @@ function quizumba_admin_customizer_menu_link() {
 
 }
 add_action ( 'admin_menu', 'quizumba_admin_customizer_menu_link', 99 );
+
+/**
+ * Get 'quizumba_logo' ID and use it to define the default logo size
+ * 
+ * @param  string $value The attachment guid, which is the full imagem URL
+ * @return string $value The new image size for 'quizumba_logo'
+ */
+function quizumba_get_customizer_logo_size( $value ) {
+    global $wpdb;
+
+    if ( ! is_numeric( $value ) ) {
+        $attachment_id = $wpdb->get_var( $wpdb->prepare( "SELECT ID FROM {$wpdb->posts} WHERE post_type = 'attachment' AND guid = %s ORDER BY post_date DESC LIMIT 1;", $value ) );
+        if ( ! is_wp_error( $attachment_id ) && wp_attachment_is_image( $attachment_id ) )
+            $value = $attachment_id;
+    }
+
+    $image_attributes = wp_get_attachment_image_src( $value, 'archive' );
+
+    $value = $image_attributes[0];
+
+    return $value;
+}
+add_filter( 'theme_mod_quizumba_logo', 'quizumba_get_customizer_logo_size' );

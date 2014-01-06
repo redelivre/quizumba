@@ -24,6 +24,14 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="container">
 			<div class="site-branding">
+				<?php
+			    // Check if there's a custom logo
+			    $logo = get_theme_mod( 'quizumba_logo' );
+			    if ( isset( $logo ) && ! empty( $logo ) ) : ?>
+		            <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+		                <img class="site-logo" src="<?php echo $logo; ?>" alt="Logo <?php bloginfo ( 'name' ); ?>" />
+		            </a>
+			    <?php endif; ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			</div>

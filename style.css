@@ -412,6 +412,10 @@ a:active {
 	margin-bottom: 1.5em;
 }
 
+.site-logo {
+	max-width: 362px;
+}
+
 .site-title,
 .site-description {
 	margin: 0;
