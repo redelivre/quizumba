@@ -16,7 +16,13 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
-		<?php echo quizumba_get_post_gallery(); ?>
+		<?php
+		if ( function_exists( 'get_post_gallery' ) ) {
+			echo get_post_gallery();
+		} else {
+			echo quizumba_get_post_gallery();
+		}
+		?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 
