@@ -642,6 +642,11 @@ object {
 	border-bottom: 1.5em solid #d4802c;
 }
 
+/* Footer Widget Area */
+.widget-area--footer .widget {
+	width: 100%;
+}
+
 /* ==========================================================================
    8.0 - Media queries
    ========================================================================== */
@@ -650,6 +655,12 @@ object {
 	/* Masonry stuff */
 	.js-masonry .grid-sizer,
 	.js-masonry .hentry {
+		width: 50%;
+	}
+
+	/* Footer Widget Area */
+	.widget-area--footer .widget {
+		float: left;
 		width: 50%;
 	}
 }
@@ -679,4 +690,20 @@ object {
     .widget-area--sidebar {
     	width: 38%;
     }
+
+    /* Footer Widget Area */
+    .widget-area--footer .widget:first-child:nth-last-child(2),
+	.widget-area--footer .widget:first-child:nth-last-child(2) ~ .widget {
+	    width: 50%;
+	}
+
+	.widget-area--footer .widget:first-child:nth-last-child(3),
+	.widget-area--footer .widget:first-child:nth-last-child(3) ~ .widget {
+	    width: 33.333%;
+	}
+
+	.widget-area--footer .widget:first-child:nth-last-child(4),
+	.widget-area--footer .widget:first-child:nth-last-child(4) ~ .widget {
+	    width: 25%;
+	}
 }
