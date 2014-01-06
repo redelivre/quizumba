@@ -48,11 +48,6 @@ function quizumba_setup() {
 	// Enable support for Post Formats.
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 
-	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'quizumba_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
 }
 endif; // quizumba_setup
 add_action( 'after_setup_theme', 'quizumba_setup' );
