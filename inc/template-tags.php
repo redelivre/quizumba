@@ -221,6 +221,22 @@ function quizumba_the_post_format() {
 }
 
 /**
+ * Create a container with the post thumbnail
+ *
+ * @uses  has_post_thumbnail()
+ * @uses  the_post_thumbnail()
+ */
+function quizumba_the_post_thumbnail( $size = 'thumbnail' ) {
+
+	if ( has_post_thumbnail() ) { ?>
+		<div class="entry-image">
+			<?php echo the_post_thumbnail( $size ); ?>
+		</div><!-- .entry-image -->
+	<?php
+	}
+}
+
+/**
  * List all the post categories
  *
  * @uses  quizumba_categorized_blog()
