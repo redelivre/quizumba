@@ -96,7 +96,7 @@ hr {
 
 /* Text elements */
 p {
-	margin-bottom: 1.5em;
+	margin: 0 0 1.5em;
 }
 ul, ol {
 	margin: 0 0 1.5em 3em;
@@ -294,7 +294,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-	color: #d4802c;
+	text-decoration: underline;
 }
 
 /* Alignment */
@@ -382,7 +382,7 @@ a:active {
 .container {
 	margin: 0 auto;
 	max-width: 1100px;
-	padding: 1em;
+	padding: 2em;
 }
 
 .site-header {
@@ -399,6 +399,15 @@ a:active {
 
 .site-header {
 	border-bottom: 1.5em solid #d4802c;
+}
+
+.site-branding {
+	margin-bottom: 1.5em;
+}
+
+.site-title,
+.site-description {
+	margin: 0;
 }
 
 /*
@@ -493,6 +502,21 @@ a:active {
 	margin: 0 0 1.5em;
 }
 
+.entry-header {
+	margin-bottom: 1.5em;
+}
+
+.entry-title {
+	line-height: 1.2;
+	margin: 0;
+	word-wrap: break-word;
+}
+
+/* Change font size for masonry-style pages */
+.full-width .entry-title {
+	font-size: 1.5em;
+}
+
 .byline,
 .updated {
 	display: none;
@@ -501,11 +525,7 @@ a:active {
 .group-blog .byline {
 	display: inline;
 }
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
-}
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
@@ -551,8 +571,15 @@ a:active {
 .site-main .gallery {
 	margin-bottom: 1.5em;
 }
-.gallery-caption {
+
+.gallery-item {
+	margin: 0;
 }
+
+.full-width .gallery-caption {
+	display: none;
+}
+
 .site-main .gallery a img {
 	border: none;
 	height: auto;
