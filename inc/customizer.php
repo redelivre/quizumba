@@ -66,7 +66,10 @@ function quizumba_customize_css() {
 	    $link_color = get_theme_mod( 'quizumba_link_color' );
         if ( ! empty( $link_color ) && $link_color != '#d4802c' ) : ?>
             a,
-            a:visited {
+            a:visited,
+            a:hover,
+            a:active,
+            a:focus {
                 color: <?php echo $link_color; ?>;
             }
             .site-header,
