@@ -16,13 +16,7 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'quizumba' ) ); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'quizumba' ),
-				'after'  => '</div>',
-			) );
-		?>
+		<?php echo quizumba_get_post_gallery(); ?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 
