@@ -11,7 +11,7 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function quizumba_customize_register( $wp_customize ) {
-	
+
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -87,3 +87,31 @@ function quizumba_customize_preview_js() {
 	wp_enqueue_script( 'quizumba_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
 add_action( 'customize_preview_init', 'quizumba_customize_preview_js' );
+
+/**
+ * Add Customizer inside Appearance submenu if it's not present already
+ *
+ * @since  Quizumba 1.0
+ */
+function quizumba_admin_customizer_menu_link() {
+
+    global $menu, $submenu;
+
+    $customizer_menu = false;
+    $customizer_link = 'customize.php';
+    
+    // Check if there's already a submenu for customize.php
+    foreach( $submenu as $k => $item ) {
+	    foreach( $item as $sub ) {
+	    	if( $customizer_link == $sub[2] ) {
+	        	$customizer_menu = true;
+	      	}
+	    }
+    }
+
+    if ( ! $customizer_menu && current_user_can( 'edit_theme_options' ) ) {
+	    add_theme_page( __( 'Customize', 'default' ), __( 'Customize', 'default' ), 'edit_theme_options', $customizer_link );
+	}
+
+}
+add_action ( 'admin_menu', 'quizumba_admin_customizer_menu_link', 99 );
