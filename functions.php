@@ -99,7 +99,7 @@ function quizumba_scripts() {
 	wp_enqueue_script( 'quizumba-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	// Masonry
-	if ( quizumba_uses_masonry() ) {
+	if ( quizumba_page_uses_masonry() ) {
 		wp_enqueue_script('quizumba-images-loaded', get_template_directory_uri().'/js/imagesloaded.pkgd.min.js', false, '3.1.1', true);
 		wp_enqueue_script( 'quizumba-masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array( 'quizumba-images-loaded' ), '3.1.3', true );
 	}

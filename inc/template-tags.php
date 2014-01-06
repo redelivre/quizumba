@@ -12,7 +12,7 @@
  * 
  * @return bool Whether the page is intended to use Masonry or not
  */
-function quizumba_uses_masonry() {
+function quizumba_page_uses_masonry() {
 	if ( is_home() || is_search() || is_archive() || is_post_type_archive() ) {
 		return true;
 	}

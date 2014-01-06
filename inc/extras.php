@@ -39,7 +39,7 @@ function quizumba_body_classes( $classes ) {
 		$classes[] = 'full-width';
 	}
 
-	if ( quizumba_uses_masonry() ) {
+	if ( quizumba_page_uses_masonry() ) {
 		$classes[] = 'masonry-on';
 	}
 
