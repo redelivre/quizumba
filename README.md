@@ -7,6 +7,7 @@ Alguns recursos:
 * Possibilidade de adicionar uma imagem de fundo para o cabeçalho do site e para o rodapé
 * Escolha da cor dos links e outros pequenos destaques
 * Escolha de cor ou imagem para o fundo do site
+* Diferentes apresentações para cada [formato de post do WordPress](http://codex.wordpress.org/pt-br:Formatos_de_Posts)
 
 
 ## Como contribuir
