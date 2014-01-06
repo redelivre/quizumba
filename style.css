@@ -413,7 +413,8 @@ a:active {
 }
 
 .site-logo {
-	max-width: 362px;
+	margin-bottom: 1.5em;
+	max-width: 100%;
 }
 
 .site-title,
@@ -728,6 +729,11 @@ object {
    ========================================================================== */
 
 @media all and (min-width: 40em) {
+	/* Site logo */
+	.site-logo {
+		max-width: 362px;
+	}
+
 	/* Masonry stuff */
 	.loop .grid-sizer,
 	.loop .hentry {

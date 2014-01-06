@@ -16,27 +16,28 @@
 			$( '.site-description' ).text( to );
 		} );
 	} );
-	// Header text color.
-	wp.customize( 'header_textcolor', function( value ) {
-		value.bind( function( to ) {
-			if ( 'blank' === to ) {
-				$( '.site-title, .site-description' ).css( {
-					'clip': 'rect(1px, 1px, 1px, 1px)',
-					'position': 'absolute'
-				} );
-			} else {
-				$( '.site-title, .site-description' ).css( {
-					'clip': 'auto',
-					'color': to,
-					'position': 'relative'
-				} );
-			}
-		} );
-	} );
+
+	// Display header text
+	wp.customize( 'quizumba_display_header_text', function( value ) {
+        value.bind( function( to ) {
+            console.log(to);
+            if ( false === to ) {
+                $( '.site-title, .site-description' ).css( {
+                    'clip': 'rect(1px, 1px, 1px, 1px)',
+                    'position': 'absolute'
+                } );
+            } else {
+                $( '.site-title, .site-description' ).css( {
+                    'clip': 'auto',
+                    'position': 'relative'
+                } );
+            }
+        } );
+    } );
+
 	// Link color
     wp.customize( 'quizumba_link_color', function( value ) {
         value.bind( function( to ) {
-        	console.log(to);
             $( 'a' ).css( 'color', to );
             $( '.site-header' ).css( 'border-color', to );
             $( '.site-footer' ).css( 'border-color', to );

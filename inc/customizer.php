@@ -60,19 +60,38 @@ function quizumba_customize_register( $wp_customize ) {
         }
     }
 
+    // Remove default controls
+    $wp_customize->remove_control( 'display_header_text' );
+    $wp_customize->remove_control( 'header_textcolor' );
+
+    // Set postMessage transport
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
+    // Site title & tagline
+    $wp_customize->add_setting( 'quizumba_display_header_text', array(
+        'capability'    => 'edit_theme_options',
+        'transport'     => 'postMessage'
+    ) );
+
+    $wp_customize->add_control( 'quizumba_display_header_text', array(
+        'label'     => __( 'Display Header Text' ),
+        'default'   => true,
+        'section'   => 'title_tagline',
+        'type'      => 'checkbox',
+        'setting'   => 'quizumba_display_header_text'
+    ) );
+
     // Branding section
     $wp_customize->add_section( 'quizumba_branding', array(
-            'title'    => __( 'Branding', 'quizumba' ),
-            'priority' => 30,
+        'title'    => __( 'Branding', 'quizumba' ),
+        'priority' => 30,
     ) );
     
     // Branding section: logo uploader
     $wp_customize->add_setting( 'quizumba_logo', array(
-            'capability'  => 'edit_theme_options'
+        'capability'  => 'edit_theme_options'
     ) );
         
     $wp_customize->add_control( new My_Customize_Image_Reloaded_Control( $wp_customize, 'quizumba_logo', array(
@@ -86,7 +105,8 @@ function quizumba_customize_register( $wp_customize ) {
 	// Color section: link color
     $wp_customize->add_setting( 'quizumba_link_color', array(
         'default'	=> '#d4802c',
-        'transport'	=> 'postMessage'
+        'transport'	=> 'postMessage',
+        'sanitize_callback' => 'quizumba_get_customizer_logo_size',
     ) );
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'quizumba_link_color', array(
@@ -99,6 +119,30 @@ function quizumba_customize_register( $wp_customize ) {
 add_action( 'customize_register', 'quizumba_customize_register' );
 
 /**
+ * Get 'quizumba_logo' ID and use it to define the default logo size
+ * 
+ * @param  string $value The attachment guid, which is the full imagem URL
+ * @return string $value The new image size for 'quizumba_logo'
+ */
+function quizumba_get_customizer_logo_size( $value ) {
+    global $wpdb;
+
+    if ( ! is_numeric( $value ) ) {
+        $attachment_id = $wpdb->get_var( $wpdb->prepare( "SELECT ID FROM {$wpdb->posts} WHERE post_type = 'attachment' AND guid = %s ORDER BY post_date DESC LIMIT 1;", $value ) );
+        if ( ! is_wp_error( $attachment_id ) && wp_attachment_is_image( $attachment_id ) )
+            $value = $attachment_id;
+    }
+
+    $image_attributes = wp_get_attachment_image_src( $value, 'archive' );
+
+    print_r($image_attributes);
+
+    $value = $image_attributes[0];
+
+    return $value;
+}
+
+/**
  * This will output the custom WordPress settings to the live theme's WP head.
  * 
  * Used for inline custom CSS
@@ -109,6 +153,20 @@ function quizumba_customize_css() {
     ?>
     <!-- Customizer options -->
     <style type="text/css">
+        <?php if ( get_theme_mod( 'quizumba_display_header_text' ) == '' ) : ?>
+            /* Header text */
+            .site-title,
+            .site-description {
+                    clip: rect(1px, 1px, 1px, 1px);
+                    position: absolute;
+            }
+        <?php else : ?>
+            .site-title,
+            .site-description {
+                    clip: auto;
+                    position: relative;
+            }
+        <?php endif; ?>
 	    <?php
 	    $color_scheme = get_theme_mod( 'quizumba_color_scheme' );
 	    if ( isset( $color_scheme ) && $color_scheme == 'dark' ) : ?>
@@ -184,26 +242,3 @@ function quizumba_admin_customizer_menu_link() {
 
 }
 add_action ( 'admin_menu', 'quizumba_admin_customizer_menu_link', 99 );
-
-/**
- * Get 'quizumba_logo' ID and use it to define the default logo size
- * 
- * @param  string $value The attachment guid, which is the full imagem URL
- * @return string $value The new image size for 'quizumba_logo'
- */
-function quizumba_get_customizer_logo_size( $value ) {
-    global $wpdb;
-
-    if ( ! is_numeric( $value ) ) {
-        $attachment_id = $wpdb->get_var( $wpdb->prepare( "SELECT ID FROM {$wpdb->posts} WHERE post_type = 'attachment' AND guid = %s ORDER BY post_date DESC LIMIT 1;", $value ) );
-        if ( ! is_wp_error( $attachment_id ) && wp_attachment_is_image( $attachment_id ) )
-            $value = $attachment_id;
-    }
-
-    $image_attributes = wp_get_attachment_image_src( $value, 'archive' );
-
-    $value = $image_attributes[0];
-
-    return $value;
-}
-add_filter( 'theme_mod_quizumba_logo', 'quizumba_get_customizer_logo_size' );
