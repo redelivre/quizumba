@@ -203,3 +203,123 @@ function quizumba_category_transient_flusher() {
 }
 add_action( 'edit_category', 'quizumba_category_transient_flusher' );
 add_action( 'save_post',     'quizumba_category_transient_flusher' );
+
+/**
+ * Create a container with post format info
+ *
+ * @uses  get_post_format() 
+ */
+function quizumba_the_post_format() {
+	$format = get_post_format();
+
+	if ( $format ) { ?>
+		<div class="entry-meta entry-meta--format">
+			<?php echo $format; ?>
+		</div><!-- .entry-meta--format -->
+	<?php
+	}
+}
+
+/**
+ * List all the post categories
+ *
+ * @uses  quizumba_categorized_blog()
+ */
+function quizumba_the_category_list() {
+
+	if ( ! quizumba_categorized_blog() )
+		return;
+
+	/* translators: used between list items, there is a space after the comma */
+	$category_list = get_the_category_list( __( ', ', 'quizumba' ) );
+
+	if ( $category_list ) : ?>
+		<span class="cat-links">
+			<?php printf( __( 'Posted in %1$s', 'quizumba' ), $category_list ); ?>
+		</span>
+	<?php
+	endif; // if $category_list
+
+}
+
+/**
+ * List all the post tags
+ *
+ * @uses  quizumba_categorized_blog()
+ */
+function quizumba_the_tag_list() {
+
+	/* translators: used between list items, there is a space after the comma */
+	$tag_list = get_the_tag_list( '', __( ', ', 'quizumba' ) );
+
+	if ( $tag_list ) : ?>
+		<span class="tag-links">
+			<?php printf( __( 'Tagged %1$s', 'quizumba' ), $tag_list ); ?>
+		</span>
+	<?php endif; // if $tag_list
+	
+}
+
+/**
+ * Retrieve galleries from the passed post's content
+ * 
+ * @todo This is a copy from get_post_galleries() function, available in WP 3.6. We
+ *       need to update Rede Livre as soon as possible
+ *
+ * @since Quizumba 1.0
+ *
+ * @param mixed $post Optional. Post ID or object.
+ * @param boolean $html Whether to return HTML or data in the array
+ * @return array A list of arrays, each containing gallery data and srcs parsed
+ *                from the expanded shortcode
+ */
+function quizumba_get_post_galleries( $post, $html = true ) {
+	global $post;
+
+    $galleries = array();
+    if ( preg_match_all( '/' . get_shortcode_regex() . '/s', $post->post_content, $matches, PREG_SET_ORDER ) ) {
+        foreach ( $matches as $shortcode ) {
+            if ( 'gallery' === $shortcode[2] ) {
+                $srcs = array();
+                $count = 1;
+
+                $gallery = do_shortcode_tag( $shortcode );
+                if ( $html ) {
+                        $galleries[] = $gallery;
+                } else {
+                    preg_match_all( '#src=([\'"])(.+?)\1#is', $gallery, $src, PREG_SET_ORDER );
+                    if ( ! empty( $src ) ) {
+                            foreach ( $src as $s )
+                                    $srcs[] = $s[2];
+                    }
+
+                    $data = shortcode_parse_atts( $shortcode[3] );
+                    $data['src'] = array_values( array_unique( $srcs ) );
+                    $galleries[] = $data;
+                }
+            }
+        }
+    }
+
+    return apply_filters( 'quizumba_get_post_galleries', $galleries, $post );
+
+}
+
+/**
+ * Check a specified post's content for gallery and, if present, return the first
+ *
+ * @todo This is a copy from get_post_galleries() function, available in WP 3.6. We
+ *       need to update Rede Livre as soon as possible
+ *
+ * @since Quizumba 1.0
+ *
+ * @param mixed $post Optional. Post ID or object.
+ * @param boolean $html Whether to return HTML or data
+ * @return string|array Gallery data and srcs parsed from the expanded shortcode
+ */
+function quizumba_get_post_gallery( $post = 0, $html = true ) {
+    $galleries = quizumba_get_post_galleries( $post, $html );
+    $gallery = reset( $galleries );
+
+    return apply_filters( 'quizumba_get_post_gallery', $gallery, $post, $galleries );
+}
