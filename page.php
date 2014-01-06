@@ -17,7 +17,23 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'page' ); ?>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<?php quizumba_the_post_thumbnail( 'singular' ); ?>
+					<a href="<?php the_permalink(); ?>" rel="bookmark">
+						<h1 class="entry-title"><?php the_title(); ?></h1>
+					</a>
+
+					<div class="entry-content">
+						<?php the_content(); ?>
+						<?php
+							wp_link_pages( array(
+								'before' => '<div class="page-links">' . __( 'Pages:', 'quizumba' ),
+								'after'  => '</div>',
+							) );
+						?>
+					</div><!-- .entry-content -->
+					<?php edit_post_link( __( 'Edit', 'quizumba' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
+				</article><!-- #post-## -->
 
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template
