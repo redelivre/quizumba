@@ -23,6 +23,7 @@ Quizumba is based on Underscores http://underscores.me/, (C) 2012-2013 Automatti
    Colors
    ==========================================================================
    Orange: #d4802c
+   Grey: #9d9d9d
 
 /* ==========================================================================
    Table of contents
@@ -57,6 +58,17 @@ Quizumba is based on Underscores http://underscores.me/, (C) 2012-2013 Automatti
 /* ==========================================================================
    1.0 - Global styles
    ========================================================================== */
+
+@font-face {
+  font-family: 'quizumba';
+  src: url('fonts/quizumba.eot?90398535');
+  src: url('fonts/quizumba.eot?90398535#iefix') format('embedded-opentype'),
+       url('fonts/quizumba.woff?90398535') format('woff'),
+       url('fonts/quizumba.ttf?90398535') format('truetype'),
+       url('fonts/quizumba.svg?90398535#quizumba') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* Apply a natural box layout model to all elements */
 *,
@@ -348,6 +360,50 @@ a:active {
 	z-index: 100000; /* Above WP toolbar */
 }
 
+/* Icons */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	font-family: "quizumba";
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	margin-right: .2em;
+	text-align: center;
+	/* opacity: .8; */
+
+	/* For safety - reset parent styles, that can break glyph codes*/
+	font-variant: normal;
+	text-transform: none;
+	 
+	/* fix buttons height, for twitter bootstrap */
+	line-height: 1em;
+
+	/* Animation center compensation - margins should be symmetric */
+	/* remove if not needed */
+	margin-left: .2em;
+
+	/* you can be more comfortable with increased icons size */
+	/* font-size: 120%; */
+
+	/* Uncomment for 3D effect */
+	/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-video:before { content: '\e807'; }
+.icon-image:before { content: '\e803'; }
+.icon-gallery:before { content: '\e802'; }
+.icon-tags:before { content: '\e804'; }
+.icon-folder:before { content: '\e805'; }
+.icon-quote:before { content: '\e801'; }
+.icon-clock:before { content: '\e800'; }
+.icon-link:before { content: '\e808'; }
+.icon-aside:before { content: '\e809'; }
+.icon-audio:before { content: '\e806'; }
+.icon-status:before { content: '\e80A'; }
+
 /* Clearing */
 .clear:before,
 .clear:after,
@@ -499,10 +555,8 @@ a:active {
 
 /* Masonry stuff */
 .loop .hentry {
-	border-color: #ebebeb;
-	border-style: solid;
-	border-width: 1px 0 0;
-	padding: 1em;
+	border-bottom: 1px solid #ebebeb;
+	padding: 1.5em 1em;
 	width: 100%;
 }
 
@@ -511,10 +565,7 @@ a:active {
 
 .hentry {
 	font-size: 1em;
-	margin: 0 0 1.5em;
 }
-
-
 
 .byline,
 .updated {
@@ -554,11 +605,23 @@ a:active {
    ========================================================================== */
 
 .entry-meta {
-	font-size: 0.875em;
+	color: #9d9d9d;
+	font-size: 0.75em;
+	text-transform: uppercase;
+}
+
+.entry-meta a,
+.entry-meta a:visited {
+	color: #9d9d9d;
+}
+
+.entry-meta a:hover {
+	color: #d4802c;
+	text-decoration: none;
 }
 
 /*
-   4.2 - Entry content
+   4.3 - Entry content
    ========================================================================== */
 
 .entry-content,
@@ -566,9 +629,9 @@ a:active {
 	word-wrap: break-word;
 }
 
-
-/* =Asides
------------------------------------------------ */
+/*
+   4.5 - Post formats
+   ========================================================================== */
 
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
