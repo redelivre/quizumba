@@ -25,27 +25,48 @@ if ( ! function_exists( 'quizumba_paging_nav' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
  *
+ * @uses  paginate_links() http://codex.wordpress.org/Function_Reference/paginate_links
  * @return void
  */
-function quizumba_paging_nav() {
+function quizumba_paging_nav( $pagination = true ) {
+	
 	// Don't print empty markup if there's only one page.
 	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
 		return;
 	}
+	
+	$prev_text_string = '<span class="meta-nav icon-prev">&larr;</span> ' . __( 'Previous page', 'quizumba');
+	$next_text_string = __( 'Next page', 'quizumba') . ' <span class="meta-nav">&rarr;</span>';
 	?>
+
 	<nav class="navigation paging-navigation" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'quizumba' ); ?></h1>
-		<div class="nav-links">
+		<?php if ( $pagination === true ) : ?>
+			<div class="nav-links nav-links--paginated">
+				<?php
+				$big = 999999999; // need an unlikely integer
 
-			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'quizumba' ) ); ?></div>
-			<?php endif; ?>
+				echo paginate_links( array(
+					'base' 			=> str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+					'format' 		=> '?paged=%#%',
+					'current'		=> max( 1, get_query_var('paged') ),
+					'prev_text'    	=> $prev_text_string,
+					'next_text'    	=> $next_text_string,
+					'total' 		=> $GLOBALS['wp_query']->max_num_pages
+				) );
+				?>
+			</div><!-- .nav-links--paginated -->
+		<?php else : ?>
+			<div class="nav-links">
+				<?php if ( get_next_posts_link() ) : ?>
+				<div class="nav-previous"><?php next_posts_link( $prev_text_string ); ?></div>
+				<?php endif; ?>
 
-			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'quizumba' ) ); ?></div>
-			<?php endif; ?>
-
-		</div><!-- .nav-links -->
+				<?php if ( get_previous_posts_link() ) : ?>
+				<div class="nav-next"><?php previous_posts_link( $next_text_string ); ?></div>
+				<?php endif; ?>
+			</div><!-- .nav-links -->
+		<?php endif; // $pagination === true ?>
 	</nav><!-- .navigation -->
 	<?php
 }
