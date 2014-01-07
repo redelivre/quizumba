@@ -91,7 +91,8 @@ function quizumba_customize_register( $wp_customize ) {
     
     // Branding section: logo uploader
     $wp_customize->add_setting( 'quizumba_logo', array(
-        'capability'  => 'edit_theme_options'
+        'capability'  => 'edit_theme_options',
+        'sanitize_callback' => 'quizumba_get_customizer_logo_size'
     ) );
         
     $wp_customize->add_control( new My_Customize_Image_Reloaded_Control( $wp_customize, 'quizumba_logo', array(
@@ -105,8 +106,7 @@ function quizumba_customize_register( $wp_customize ) {
 	// Color section: link color
     $wp_customize->add_setting( 'quizumba_link_color', array(
         'default'	=> '#d4802c',
-        'transport'	=> 'postMessage',
-        'sanitize_callback' => 'quizumba_get_customizer_logo_size',
+        'transport'	=> 'postMessage'
     ) );
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'quizumba_link_color', array(
@@ -167,24 +167,6 @@ function quizumba_customize_css() {
                     position: relative;
             }
         <?php endif; ?>
-	    <?php
-	    $color_scheme = get_theme_mod( 'quizumba_color_scheme' );
-	    if ( isset( $color_scheme ) && $color_scheme == 'dark' ) : ?>
-	            .site-header,
-	            .site-footer {
-	                    background-color: #000;
-	                    color: #fff;
-	            }
-
-	            .main-navigation ul ul {
-	                    background: #000;
-	            }
-
-	            .widget-area--footer + .site-info {
-	                    border-color: #222;
-	            }
-	    <?php endif; ?>
-
 
 	    <?php
 	    $link_color = get_theme_mod( 'quizumba_link_color' );
