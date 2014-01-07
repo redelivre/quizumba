@@ -23,3 +23,5 @@ Há, basicamente, três formas:
 * [HTML5 Boilerplate](http://html5boilerplate.com/)
 * [Masonry](http://masonry.desandro.com/)
 * [imagesLoaded](http://imagesloaded.desandro.com)
+* [Fontello](http://fontello.com)
+* [FitVids.js](http://fitvidsjs.com)
