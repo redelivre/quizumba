@@ -105,7 +105,7 @@ function quizumba_customize_register( $wp_customize ) {
 
 	// Color section: link color
     $wp_customize->add_setting( 'quizumba_link_color', array(
-        'default'	=> '#d4802c',
+        'default'	=> '#d6812c',
         'transport'	=> 'postMessage'
     ) );
 
@@ -134,9 +134,6 @@ function quizumba_get_customizer_logo_size( $value ) {
     }
 
     $image_attributes = wp_get_attachment_image_src( $value, 'archive' );
-
-    print_r($image_attributes);
-
     $value = $image_attributes[0];
 
     return $value;
@@ -170,7 +167,7 @@ function quizumba_customize_css() {
 
 	    <?php
 	    $link_color = get_theme_mod( 'quizumba_link_color' );
-        if ( ! empty( $link_color ) && $link_color != '#d4802c' ) : ?>
+        if ( ! empty( $link_color ) && $link_color != '#d6812c' ) : ?>
             a,
             a:visited,
             a:hover,
