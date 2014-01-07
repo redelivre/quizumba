@@ -1,6 +1,6 @@
 <?php
 /**
- * Default content template
+ * The template for displaying posts in the Video post format
  * 
  * @package Quizumba
  * @since  Quizumba 1.0
@@ -15,8 +15,8 @@
 		</a>
 	</header><!-- .entry-header -->
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
+	<div class="entry-content">
+		<?php the_content(); ?>
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-meta">
