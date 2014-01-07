@@ -97,9 +97,12 @@ function quizumba_scripts() {
 
 	// Masonry
 	if ( quizumba_page_uses_masonry() ) {
-		wp_enqueue_script('quizumba-images-loaded', get_template_directory_uri().'/js/imagesloaded.pkgd.min.js', false, '3.1.1', true);
+		wp_enqueue_script('quizumba-images-loaded', get_template_directory_uri().'/js/imagesloaded.pkgd.min.js', false, '3.1.1', true );
 		wp_enqueue_script( 'quizumba-masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array( 'quizumba-images-loaded' ), '3.1.3', true );
 	}
+
+	// FitVids
+	wp_enqueue_script('quizumba-fitvids', get_template_directory_uri().'/js/jquery.fitvids.js', array( 'jquery' ), '1.0.3', true );
 
    	// Loads JavaScript file with functionality specific to Quizumba
     wp_enqueue_script( 'quizumba-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '', true );

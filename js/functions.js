@@ -17,4 +17,7 @@ jQuery( document ).ready( function() {
         } );
     } );
 
+    // FitVids
+    jQuery( '.entry-content, .widget' ).fitVids();
+
 });
