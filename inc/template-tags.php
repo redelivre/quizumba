@@ -156,7 +156,7 @@ function quizumba_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	printf( __( '<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'quizumba' ),
+	printf( __( '<span class="posted-on icon-clock">%1$s</span><span class="byline"> by %2$s</span>', 'quizumba' ),
 		sprintf( '<a href="%1$s" rel="bookmark">%2$s</a>',
 			esc_url( get_permalink() ),
 			$time_string
@@ -212,12 +212,12 @@ add_action( 'save_post',     'quizumba_category_transient_flusher' );
 function quizumba_the_post_format() {
 	$format = get_post_format();
 
-	if ( $format ) { ?>
-		<div class="entry-meta entry-meta--format">
-			<?php echo get_post_format_string( $format ); ?>
-		</div><!-- .entry-meta--format -->
-	<?php
-	}
+	if ( $format ) : ?>
+		<a href="<?php echo get_post_format_link( $format ); ?>" class="format-link">
+			<span class="format-name icon-<?php echo $format; ?>"><?php echo get_post_format_string( $format ); ?></span>
+		</a><!-- .format-link -->
+	<?
+	endif;
 }
 
 /**
@@ -228,12 +228,12 @@ function quizumba_the_post_format() {
  */
 function quizumba_the_post_thumbnail( $size = 'thumbnail' ) {
 
-	if ( has_post_thumbnail() ) { ?>
+	if ( has_post_thumbnail() ) : ?>
 		<div class="entry-image">
 			<?php echo the_post_thumbnail( $size ); ?>
 		</div><!-- .entry-image -->
 	<?php
-	}
+	endif;
 }
 
 /**
@@ -250,8 +250,8 @@ function quizumba_the_category_list() {
 	$category_list = get_the_category_list( __( ', ', 'quizumba' ) );
 
 	if ( $category_list ) : ?>
-		<span class="cat-links">
-			<?php printf( __( 'Posted in %1$s', 'quizumba' ), $category_list ); ?>
+		<span class="cat-links icon-folder">
+			<?php echo $category_list; ?>
 		</span>
 	<?php
 	endif; // if $category_list
@@ -269,8 +269,8 @@ function quizumba_the_tag_list() {
 	$tag_list = get_the_tag_list( '', __( ', ', 'quizumba' ) );
 
 	if ( $tag_list ) : ?>
-		<span class="tag-links">
-			<?php printf( __( 'Tagged %1$s', 'quizumba' ), $tag_list ); ?>
+		<span class="tag-links icon-tags">
+			<?php echo $tag_list; ?>
 		</span>
 	<?php endif; // if $tag_list
 	
