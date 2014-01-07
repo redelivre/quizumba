@@ -1,12 +1,14 @@
 <?php
 /**
+ * The template for displaying posts in the Gallery post format
+ * 
  * @package Quizumba
+ * @since  Quizumba 1.0
  */
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php quizumba_the_post_format(); ?>
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 	</header><!-- .entry-header -->
 
@@ -27,12 +29,8 @@
 	<?php endif; ?>
 
 	<footer class="entry-meta">
+		<?php quizumba_the_post_format(); ?>
 		<?php quizumba_posted_on(); ?>
-
-		<?php quizumba_the_category_list(); ?>
-
-		<?php quizumba_the_tag_list(); ?>
-
 		<?php edit_post_link( __( 'Edit', 'quizumba' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-## -->
