@@ -89,6 +89,10 @@ function quizumba_scripts() {
     wp_register_style( 'quizumba-normalize', get_template_directory_uri() . '/css/normalize.css', array(), '2.1.3' );
     wp_enqueue_style( 'quizumba-normalize' );
 
+    // Google Fonts
+    wp_register_style( 'quizumba-fonts', 'http://fonts.googleapis.com/css?family=Raleway:500,700' );
+    wp_enqueue_style( 'quizumba-fonts' );
+
     // Main style
 	wp_enqueue_style( 'quizumba-style', get_stylesheet_uri() );
 
