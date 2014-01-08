@@ -24,9 +24,13 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-complementary">
 			<div class="container">
-				<a href="#">Twitter</a>	
-				<a href="#">Facebook</a>	
-				<a href="#">YouTube</a>
+				 <div class="social">
+                    <a class="social-link social-link-twitter" href="#"><span class="icon icon-twitter"></span></a>
+                    <a class="social-link social-link-facebook" href="#"><span class="icon icon-facebook"></span></a>
+                    <a class="social-link social-link-google" href="#"><span class="icon icon-google"></span></a>
+                    <a class="social-link social-link-youtube" href="#"><span class="icon icon-youtube"></span></a>
+                    <a class="social-link social-link-rss" href="#"><span class="icon icon-rss"></span></a>
+                </div><!-- .social networks -->
 			</div>
 		</div><!-- .site-complementary -->
 

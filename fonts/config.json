@@ -38,7 +38,7 @@
     },
     {
       "uid": "ab95e1351ebaec5850101097cbf7097f",
-      "css": "quote-left",
+      "css": "quote",
       "code": 59393,
       "src": "fontawesome"
     },
@@ -49,9 +49,33 @@
       "src": "fontawesome"
     },
     {
+      "uid": "72b1277834cba5b7944b0a6cac7ddb0d",
+      "css": "rss",
+      "code": 59404,
+      "src": "fontawesome"
+    },
+    {
       "uid": "f27bba41a700af51a4dd23cf4edea61d",
       "css": "audio",
       "code": 59398,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "8e04c98c8f5ca0a035776e3001ad2638",
+      "css": "facebook",
+      "code": 59406,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "627abcdb627cb1789e009c08e2678ef9",
+      "css": "twitter",
+      "code": 59405,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "a9862b9d5197886c1ad693ecd7120b31",
+      "css": "youtube",
+      "code": 59403,
       "src": "fontawesome"
     },
     {
@@ -70,6 +94,12 @@
       "uid": "4b20e1deee87faf4c3fab735fbd4bc1a",
       "css": "status",
       "code": 59402,
+      "src": "entypo"
+    },
+    {
+      "uid": "b945f4ac2439565661e8e4878e35d379",
+      "css": "google",
+      "code": 59407,
       "src": "entypo"
     }
   ]
