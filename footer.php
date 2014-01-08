@@ -12,7 +12,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="container">
+		<div class="container container--padding">
 			<?php if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
 		        <div id="tertiary" class="widget-area widget-area--footer clear" role="complementary">
 		                <?php dynamic_sidebar( 'sidebar-footer' ); ?>

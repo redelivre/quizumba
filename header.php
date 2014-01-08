@@ -22,8 +22,16 @@
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
-		<div class="container">
-			<div class="site-branding">
+		<div class="site-complementary">
+			<div class="container">
+				<a href="#">Twitter</a>	
+				<a href="#">Facebook</a>	
+				<a href="#">YouTube</a>
+			</div>
+		</div><!-- .site-complementary -->
+
+		<div class="site-branding">
+			<div class="container container--padding">
 				<?php
 			    // Check if there's a custom logo
 			    $logo = get_theme_mod( 'quizumba_logo' );
@@ -34,16 +42,17 @@
 			    <?php endif; ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-			</div>
+			</div><!-- .container -->
+		</div><!-- .site-branding -->
 
-			<nav id="site-navigation" class="main-navigation" role="navigation">
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<div class="container">
 				<h1 class="menu-toggle"><?php _e( 'Menu', 'quizumba' ); ?></h1>
 				<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'quizumba' ); ?></a>
-
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			</nav><!-- #site-navigation -->
-		</div><!-- .container -->
+			</div><!-- .container -->
+		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
-		<div class="container">
+		<div class="container container--padding">

@@ -18,11 +18,10 @@ Quizumba is based on Underscores http://underscores.me/, (C) 2012-2013 Automatti
 */
 
 
-
 /* ==========================================================================
    Colors
    ==========================================================================
-   Orange: #d4802c
+   Orange: #d6812c
    Grey: #9d9d9d
 
 /* ==========================================================================
@@ -86,13 +85,13 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: Raleway, "Helvetica Neue", Arial, sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
 }
 
 html {
-	background: #fff;
+	background: #fcfcfc;
 }
 
 /* Headings */
@@ -301,18 +300,18 @@ textarea {
 
 /* Links */
 a {
-	color: #d4802c;
+	color: #d6812c;
 	text-decoration: none;
 }
 
 a:visited {
-	color: #d4802c;
+	color: #d6812c;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #404040;
+	color: #d6812c;
 	text-decoration: underline;
 }
 
@@ -437,19 +436,15 @@ a:active {
    2.0 - Basic structure
    ========================================================================== */
 
-.site-header,
-.site-footer {
-	background: #222;
-}
-
 .container {
 	margin: 0 auto;
 	max-width: 1100px;
-	padding: 2em;
+	padding: 0 2em;
 }
 
-.site-header {
-	text-align: center;
+/* Container with full padding */
+.container--padding {
+	padding: 2em;
 }
 
 /* ==========================================================================
@@ -460,16 +455,26 @@ a:active {
    3.1 - Site header
    ========================================================================== */
 
-.site-header {
-	border-bottom: 1.5em solid #d4802c;
+.site-complementary {
+	font-size: 0.875em;
+	padding: 1em 0;
 }
 
-.site-branding {
-	margin-bottom: 1.5em;
+.site-complementary a {
+	color: #fff;
+}
+
+.site-header {
+	background: #000;
+	color: #fff;
+	text-align: center;
+}
+
+.site-header a {
+	color: #fff;
 }
 
 .site-logo {
-	margin-bottom: 1.5em;
 	max-width: 100%;
 }
 
@@ -478,14 +483,22 @@ a:active {
 	margin: 0;
 }
 
+.site-description {
+	color: #fff;
+	font-size: 1em;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
 /*
    3.2 - Main navigation
    ========================================================================== */
 
 .main-navigation {
+	background: #d6812c;
 	clear: both;
 	display: block;
-	float: left;
+	padding: 1em 0;
 	width: 100%;
 }
 .main-navigation ul {
@@ -498,6 +511,7 @@ a:active {
 	position: relative;
 }
 .main-navigation a {
+	color: #fff;
 	display: block;
 	text-decoration: none;
 }
@@ -556,7 +570,7 @@ a:active {
 /* Masonry stuff */
 .loop .hentry {
 	border-bottom: 1px solid #ebebeb;
-	padding: 1.5em 1em;
+	padding: 1.5em 0;
 	width: 100%;
 }
 
@@ -616,7 +630,7 @@ a:active {
 }
 
 .entry-meta a:hover {
-	color: #d4802c;
+	color: #d6812c;
 	text-decoration: none;
 }
 
@@ -717,21 +731,29 @@ object {
 }
 
 
-/* =Navigation
------------------------------------------------ */
+/*
+   4.7 - Post / page navigation
+   ========================================================================== */
 
 .site-main [class*="navigation"] {
-	margin: 0 0 1.5em;
+	margin: 3em 0 0;
 	overflow: hidden;
 }
+
 [class*="navigation"] .nav-previous {
 	float: left;
 	width: 50%;
 }
+
 [class*="navigation"] .nav-next {
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+
+/* For pagination */
+.nav-links--paginated {
+	text-align: center;
 }
 
 
@@ -749,8 +771,11 @@ object {
    5.0 - Widget area
    ========================================================================== */
 
-.widget {
+.widget-area--sidebar {
 	font-size: 0.875em;
+}
+
+.widget {
 	margin: 0 0 1.5em;
 	padding: 1.143em;
 }
@@ -783,8 +808,10 @@ object {
    ========================================================================== */
 
 .site-footer {
-	border-bottom: 1.5em solid #d4802c;
+	background: #000;
+	border-bottom: 1.5em solid #d6812c;
 	color: #fff;
+	font-size: 0.875em;
 }
 
 /* ==========================================================================
@@ -800,6 +827,7 @@ object {
 	/* Masonry stuff */
 	.loop .grid-sizer,
 	.loop .hentry {
+		padding: 1.5em 1em;
 		width: 50%;
 	}
 
@@ -822,7 +850,10 @@ object {
     .content-area,
     .widget-area--sidebar {
         float: left;
-        padding-left: 1.5em;
+    }
+
+    .widget-area--sidebar {
+    	padding-left: 2em;
     }
 
     .content-area {
