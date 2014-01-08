@@ -17,7 +17,7 @@ Há, basicamente, três formas:
 2. Através dos [*issues*](https://github.com/redelivre/quizumba/issues) (incidentes) do GitHub, é possível contribuir rapidamente. Informe sobre um erro, faça sugestões ou tire dúvidas sobre a funcionalidade de algum elemento.
 3. Para contribuir com códigos e novas funcionalidades, é necessário clicar no botão *Fork*, criar um *branch*, arrumar o código e fazer um *pull request*. Leia mais sobre [como colaborar dentro do GitHub](https://help.github.com/categories/63/articles) (em inglês).
 
-## Agradecimentos e referências
+## Agradecimentos, créditos, referências
 * [Underscores](http://underscores.me)
 * [Normalize.css](http://necolas.github.io/normalize.css/)
 * [HTML5 Boilerplate](http://html5boilerplate.com/)
@@ -25,3 +25,4 @@ Há, basicamente, três formas:
 * [imagesLoaded](http://imagesloaded.desandro.com)
 * [Fontello](http://fontello.com)
 * [FitVids.js](http://fitvidsjs.com)
+* Fonte Raleway, no [Google Fonts](http://www.google.com/fonts/specimen/Raleway)
