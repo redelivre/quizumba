@@ -51,7 +51,7 @@
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<div class="container">
-				<h1 class="menu-toggle"><?php _e( 'Menu', 'quizumba' ); ?></h1>
+				<h1 class="menu-toggle"><span class="icon-menu"><?php _e( 'Menu', 'quizumba' ); ?></span></h1>
 				<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'quizumba' ); ?></a>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</div><!-- .container -->

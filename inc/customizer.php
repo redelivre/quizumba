@@ -214,6 +214,7 @@ function quizumba_customize_css() {
 
             .site-header a,
             .site-description,
+            .menu-toggle,
             .site-footer {
                 color: #000;
             }
