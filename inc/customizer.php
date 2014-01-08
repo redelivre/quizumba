@@ -102,7 +102,6 @@ function quizumba_customize_register( $wp_customize ) {
         'context'   => 'quizumba-custom-logo'
     ) ) );
 
-
 	// Color section: link color
     $wp_customize->add_setting( 'quizumba_link_color', array(
         'default'	=> '#d6812c',
@@ -114,6 +113,21 @@ function quizumba_customize_register( $wp_customize ) {
         'section'    => 'colors',
         'setting'   => 'quizumba_link_color'
     ) ) );
+
+    // Color section: color scheme
+    $wp_customize->add_setting( 'quizumba_color_scheme', array(
+        'default'    => 'dark',
+        'transport'  => 'postMessage'
+    ) );
+
+    $wp_customize->add_control( 'quizumba_color_scheme', array(
+        'label'    => __( 'Color Scheme', 'quizumba' ),
+        'section'  => 'colors',
+        'type'     => 'radio',
+        'choices'  => array( 'light' => __( 'Light', 'quizumba' ), 'dark' => __( 'Dark', 'quizumba' ) ),
+        'priority' => 5,
+        'setting' => 'quizumba_color_scheme'
+    ) );
 
 }
 add_action( 'customize_register', 'quizumba_customize_register' );
@@ -168,20 +182,44 @@ function quizumba_customize_css() {
 	    <?php
 	    $link_color = get_theme_mod( 'quizumba_link_color' );
         if ( ! empty( $link_color ) && $link_color != '#d6812c' ) : ?>
-            a,
-            a:visited,
-            a:hover,
-            a:active,
-            a:focus {
-                color: <?php echo $link_color; ?>;
+            .site-content a,
+            .site-content a:visited,
+            .site-content a:hover,
+            .site-content a:active,
+            .site-content a:focus,
+            .site-footer a,
+            .site-footer a:hover,
+            .site-footer a:visited,
+            .site-footer a:active {
+                color: <?php echo $link_color; ?>
             }
-            .site-header,
+
+            .main-navigation,
+            .main-navigation .children {
+                background-color: <?php echo $link_color; ?>
+            }
+
             .site-footer {
-            	border-color: <?php echo $link_color; ?>;
+            	border-color: <?php echo $link_color; ?>
             }
    		<?php endif; ?>
+
+        <?php
+        $color_scheme = get_theme_mod( 'quizumba_color_scheme' );
+        if ( isset( $color_scheme ) && $color_scheme == 'light' ) : ?>
+            .site-header,
+            .site-footer {
+                    background-color: #fff;
+            }
+
+            .site-header a,
+            .site-description,
+            .site-footer {
+                color: #000;
+            }
+        <?php endif; ?>
     </style> 
-    <!-- /Customizer options -->
+    <!-- / Customizer options -->
     <?php
 }
 add_action( 'wp_head', 'quizumba_customize_css' );

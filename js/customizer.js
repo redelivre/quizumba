@@ -20,7 +20,6 @@
 	// Display header text
 	wp.customize( 'quizumba_display_header_text', function( value ) {
         value.bind( function( to ) {
-            console.log(to);
             if ( false === to ) {
                 $( '.site-title, .site-description' ).css( {
                     'clip': 'rect(1px, 1px, 1px, 1px)',
@@ -38,9 +37,23 @@
 	// Link color
     wp.customize( 'quizumba_link_color', function( value ) {
         value.bind( function( to ) {
-            $( 'a' ).css( 'color', to );
-            $( '.site-header' ).css( 'border-color', to );
+            $( '.site-content a, .site-footer a' ).css( 'color', to );
+            $( '.main-navigation, .main-navigation ul ul' ).css( 'background-color', to );
             $( '.site-footer' ).css( 'border-color', to );
+        } );
+    } );
+
+    // Color scheme
+    wp.customize( 'quizumba_color_scheme', function( value ) {
+        value.bind( function( to ) {
+            if ( to == 'light' ) {
+                $( '.site-header, .site-footer' ).css( 'background-color', '#fff' );
+                $( '.site-header a, .site-description, .site-footer' ).css( 'color', '#000' );
+            }
+            else {
+                $( '.site-header, .site-footer' ).css( 'background-color', '#000' );
+                $( '.site-header a, .site-description, .site-footer' ).css( 'color', '#fff' );
+            }
         } );
     } );
 } )( jQuery );
