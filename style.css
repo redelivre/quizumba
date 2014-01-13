@@ -405,7 +405,8 @@ a:active {
 .icon-youtube:before { content: '\e80B'; }
 .icon-rss:before { content: '\e80C'; }
 .icon-twitter:before { content: '\e80D'; }
-.icon-facebook:before { content: '\e80E'; }
+.icon-facebook:before,
+.icon-facebook-page:before { content: '\e80E'; }
 .icon-google:before { content: '\e80F'; }
 .icon-menu:before { content: '\e810'; }
 
@@ -470,12 +471,17 @@ a:active {
 	font-size: 1.5em;
 }
 
+.social-link {
+	display: inline-block;
+}
+
 /* Hover colors */
 .social-link-twitter:hover {
 	color: #00aced;
 }
 
-.social-link-facebook:hover {
+.social-link-facebook:hover,
+.social-link-facebook-page:hover {
 	color: #3b5998;
 }
 

@@ -24,13 +24,22 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-complementary">
 			<div class="container">
-				 <div class="social">
-                    <a class="social-link social-link-twitter" href="#"><span class="icon icon-twitter"></span></a>
-                    <a class="social-link social-link-facebook" href="#"><span class="icon icon-facebook"></span></a>
-                    <a class="social-link social-link-google" href="#"><span class="icon icon-google"></span></a>
-                    <a class="social-link social-link-youtube" href="#"><span class="icon icon-youtube"></span></a>
-                    <a class="social-link social-link-rss" href="#"><span class="icon icon-rss"></span></a>
-                </div><!-- .social networks -->
+                <?php
+                // Social networks & RSS feed
+				$social = get_option( 'campanha_social_networks' );
+				if ( isset( $social ) && !empty( $social ) ) : ?>
+					<div class="social">
+						<?php
+						foreach ( $social as $key => $value ) :
+							if ( ! empty( $value) ) : ?>
+								<a class="social-link social-link-<?php echo $key; ?>" href="<?php echo esc_url( $value ); ?>"><span class="icon icon-<?php echo $key; ?>"></span></a>
+							<?php
+							endif;
+						endforeach;
+						?>
+						<a class="social-link social-link-rss" href="<?php bloginfo( 'rss2_url' ); ?>"><span class="icon icon-rss"></span></a>
+					</div><!-- .social -->
+				<?php endif; ?>
 			</div>
 		</div><!-- .site-complementary -->
 
