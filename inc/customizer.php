@@ -71,13 +71,13 @@ function quizumba_customize_register( $wp_customize ) {
 
     // Site title & tagline
     $wp_customize->add_setting( 'quizumba_display_header_text', array(
-        'capability'    => 'edit_theme_options',
-        'transport'     => 'postMessage'
+        'capability'        => 'edit_theme_options',
+        'default'           => true,
+        'transport'         => 'postMessage'
     ) );
 
     $wp_customize->add_control( 'quizumba_display_header_text', array(
         'label'     => __( 'Display Header Text' ),
-        'default'   => true,
         'section'   => 'title_tagline',
         'type'      => 'checkbox',
         'setting'   => 'quizumba_display_header_text'
@@ -164,7 +164,7 @@ function quizumba_customize_css() {
     ?>
     <!-- Customizer options -->
     <style type="text/css">
-        <?php if ( get_theme_mod( 'quizumba_display_header_text' ) == '' ) : ?>
+        <?php if ( get_theme_mod( 'quizumba_display_header_text' ) === false ) : ?>
             /* Header text */
             .site-title,
             .site-description {
