@@ -69,6 +69,7 @@ get_header(); ?>
 					?>
 
 					<?php edit_post_link( __( 'Edit', 'quizumba' ), '<span class="edit-link">', '</span>' ); ?>
+					<?php edit_post_link( __( 'Edit', 'quizumba' ), '<span class="edit-link icon-edit">', '</span>' ); ?>
 				</footer><!-- .entry-meta -->
 			</article><!-- #post-## -->
 
