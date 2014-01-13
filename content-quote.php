@@ -16,7 +16,7 @@
 	<footer class="entry-meta">
 		<?php quizumba_the_post_format(); ?>
 		<?php quizumba_posted_on(); ?>
-		<?php edit_post_link( __( 'Edit', 'quizumba' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'quizumba' ), '<span class="edit-link icon-edit">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 	
 </article><!-- #post-## -->

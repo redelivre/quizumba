@@ -385,10 +385,7 @@ a:active {
 	margin-left: .2em;
 
 	/* you can be more comfortable with increased icons size */
-	/* font-size: 120%; */
-
-	/* Uncomment for 3D effect */
-	/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+	font-size: 110%;
 }
  
 .icon-video:before { content: '\e807'; }
@@ -409,6 +406,7 @@ a:active {
 .icon-facebook-page:before { content: '\e80E'; }
 .icon-google:before { content: '\e80F'; }
 .icon-menu:before { content: '\e810'; }
+.icon-edit:before { content: '\e811'; }
 
 /* Clearing */
 .clear:before,
@@ -660,16 +658,6 @@ a:active {
 	color: #9d9d9d;
 	font-size: 0.75em;
 	text-transform: uppercase;
-}
-
-.entry-meta a,
-.entry-meta a:visited {
-	color: #9d9d9d;
-}
-
-.entry-meta a:hover {
-	color: #d6812c;
-	text-decoration: none;
 }
 
 /*

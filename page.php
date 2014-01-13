@@ -32,7 +32,7 @@ get_header(); ?>
 							) );
 						?>
 					</div><!-- .entry-content -->
-					<?php edit_post_link( __( 'Edit', 'quizumba' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
+					<?php edit_post_link( __( 'Edit', 'quizumba' ), '<footer class="entry-meta"><span class="edit-link icon-edit">', '</span></footer>' ); ?>
 				</article><!-- #post-## -->
 
 				<?php

@@ -234,9 +234,11 @@ function quizumba_the_post_format() {
 	$format = get_post_format();
 
 	if ( $format ) : ?>
-		<a href="<?php echo get_post_format_link( $format ); ?>" class="format-link">
-			<span class="format-name icon-<?php echo $format; ?>"><?php echo get_post_format_string( $format ); ?></span>
-		</a><!-- .format-link -->
+		<span class="format-name icon-<?php echo $format; ?>">
+			<a href="<?php echo get_post_format_link( $format ); ?>" class="format-link">
+				<?php echo get_post_format_string( $format ); ?>
+			</a><!-- .format-link -->
+		</span>
 	<?
 	endif;
 }
@@ -271,9 +273,9 @@ function quizumba_the_category_list() {
 	$category_list = get_the_category_list( __( ', ', 'quizumba' ) );
 
 	if ( $category_list ) : ?>
-		<span class="cat-links icon-folder">
+		<div class="cat-links icon-folder">
 			<?php echo $category_list; ?>
-		</span>
+		</div>
 	<?php
 	endif; // if $category_list
 
@@ -290,9 +292,9 @@ function quizumba_the_tag_list() {
 	$tag_list = get_the_tag_list( '', __( ', ', 'quizumba' ) );
 
 	if ( $tag_list ) : ?>
-		<span class="tag-links icon-tags">
+		<div class="tag-links icon-tags">
 			<?php echo $tag_list; ?>
-		</span>
+		</div>
 	<?php endif; // if $tag_list
 	
 }
