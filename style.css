@@ -302,6 +302,11 @@ textarea {
 a {
 	color: #d6812c;
 	text-decoration: none;
+
+	-webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
 }
 
 a:visited {
@@ -311,7 +316,6 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-	color: #d6812c;
 	text-decoration: underline;
 }
 
@@ -518,6 +522,10 @@ a:active {
 	margin: 0;
 }
 
+.site-title a {
+	text-decoration: none;
+}
+
 .site-description {
 	color: #fff;
 	font-size: 1em;
@@ -567,6 +575,7 @@ a:active {
 	padding: 0.5em;
 	text-decoration: none;
 }
+
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	display: none;
@@ -703,22 +712,27 @@ a:active {
 	margin-top: 0;
 	padding: 0;
 }
+
 .wp-caption {
-	border: 1px solid #ccc;
+	background: #fff;
+	border: 1px solid #f2f2f2;
 	margin-bottom: 1.5em;
-	max-width: 100%;
+	padding: 0.5em;
 }
+
 .wp-caption img[class*="wp-image-"] {
 	display: block;
-	margin: 1.2% auto 0;
-	max-width: 98%;
 }
+
 .wp-caption-text {
 	text-align: center;
+	font-size: 0.875em;
 }
+
 .wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+	margin: 0.8075em 0 0;
 }
+
 .site-main .gallery {
 	margin-bottom: 1.5em !important;
 }
