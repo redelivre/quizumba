@@ -18,10 +18,12 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<?php quizumba_the_post_thumbnail( 'singular' ); ?>
-					<a href="<?php the_permalink(); ?>" rel="bookmark">
-						<h1 class="entry-title"><?php the_title(); ?></h1>
-					</a>
+					<header class="entry-header">
+						<?php quizumba_the_post_thumbnail( 'singular' ); ?>
+						<a href="<?php the_permalink(); ?>" rel="bookmark">
+							<h1 class="entry-title"><?php the_title(); ?></h1>
+						</a>
+					</header><!-- .entry-header -->
 
 					<div class="entry-content">
 						<?php the_content(); ?>
