@@ -129,6 +129,23 @@ function quizumba_customize_register( $wp_customize ) {
         'setting' => 'quizumba_color_scheme'
     ) );
 
+    // Slider
+	$wp_customize->add_section( 'quizumba_slider', array(
+			'title'    => __( 'Slider', 'quizumba' ),
+			'priority' => 30,
+	) );
+	$wp_customize->add_setting( 'quizumba_display_slider', array(
+			'capability' => 'edit_theme_options',
+	) );
+	 
+	$wp_customize->add_control( 'quizumba_display_slider', array(
+			'label'    => __( 'Exibe o slider na página principal', 'quizumba' ),
+			'section'  => 'quizumba_slider',
+			'type'     => 'checkbox',
+			'settings' => 'quizumba_display_slider'
+	) );
+
+
 }
 add_action( 'customize_register', 'quizumba_customize_register' );
 

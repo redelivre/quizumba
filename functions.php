@@ -21,7 +21,9 @@ if ( ! function_exists( 'quizumba_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function quizumba_setup() {
-
+	// Customizer
+	require( get_template_directory() . '/inc/hacklab_post2home/hacklab_post2home.php' );
+	
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
@@ -41,6 +43,7 @@ function quizumba_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'archive', 362, 9999 );
 	add_image_size( 'singular', 642, 380, false );
+	add_image_size( 'slider', 517, 240, true);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -85,6 +88,10 @@ add_action( 'widgets_init', 'quizumba_widgets_init' );
  */
 function quizumba_scripts() {
 
+	// slideshow.css
+	wp_register_style( 'quizumba-slideshow', get_template_directory_uri() . '/css/slideshow.css', array(), '1' );
+	wp_enqueue_style( 'quizumba-slideshow' );
+	
 	// Normalize.css
     wp_register_style( 'quizumba-normalize', get_template_directory_uri() . '/css/normalize.css', array(), '2.1.3' );
     wp_enqueue_style( 'quizumba-normalize' );
@@ -118,6 +125,8 @@ function quizumba_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	
+
 }
 add_action( 'wp_enqueue_scripts', 'quizumba_scripts' );
 

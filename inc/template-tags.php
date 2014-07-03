@@ -239,7 +239,7 @@ function quizumba_the_post_format() {
 				<?php echo get_post_format_string( $format ); ?>
 			</a><!-- .format-link -->
 		</span>
-	<?
+	<?php
 	endif;
 }
 
@@ -248,7 +248,8 @@ function quizumba_the_post_format() {
  *
  * @uses  has_post_thumbnail()
  * @uses  the_post_thumbnail()
- */
+ ************************************************************************/
+
 function quizumba_the_post_thumbnail( $size = 'thumbnail' ) {
 
 	if ( has_post_thumbnail() ) : ?>
@@ -362,3 +363,14 @@ function quizumba_get_post_gallery( $post = 0, $html = true ) {
 
     return apply_filters( 'quizumba_get_post_gallery', $gallery, $post, $galleries );
 }
+
+function quizumba_the_slider()
+{
+	wp_enqueue_script('jquery-cycle2', get_template_directory_uri() . '/js/jquery.cycle2.min.js', array('jquery'));
+	wp_enqueue_script('jquery-cycle2-carousel', get_template_directory_uri() . '/js/jquery.cycle2.carousel.min.js', array('jquery-cycle2'));
+	wp_enqueue_script('jquery-cycle2-swipe', get_template_directory_uri() . '/js/jquery.cycle2.swipe.min.js', array('jquery-cycle2'));
+	wp_enqueue_script('jquery-cycle2-center', get_template_directory_uri() . '/js/jquery.cycle2.center.min', array('jquery-cycle2'));
+	wp_enqueue_script('jquery-slider-scroller', get_template_directory_uri() . '/js/jquery.slider.scroller.js', array('jquery-cycle2'));
+
+}
+add_action('wp_enqueue_scripts', 'quizumba_the_slider');
