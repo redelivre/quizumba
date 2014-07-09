@@ -43,7 +43,7 @@ function quizumba_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'archive', 362, 9999 );
 	add_image_size( 'singular', 642, 380, false );
-	add_image_size( 'slider', 517, 240, true);
+	add_image_size( 'slider', 517, 300, true);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

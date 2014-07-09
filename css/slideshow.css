@@ -1,7 +1,7 @@
 
 /* pager */
 .cycle-pager { 
-    text-align: center; /*left: 960px;*/ width: 100%; z-index: 500; position: absolute; top: 225px; overflow: hidden;
+    text-align: center; /*left: 960px;*/ width: 100%; z-index: 500; position: absolute; top: 275px; overflow: hidden;
 }
 .cycle-pager span { 
     font-family: arial; font-size: 50px; width: 16px; height: 16px; 

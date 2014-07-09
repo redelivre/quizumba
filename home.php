@@ -34,7 +34,7 @@ get_header(); ?>
 							        			<?php $category = get_the_category(); ?>
 												<a href="<?php echo get_category_link( $category[0]->term_id ); ?>"><?php echo $category[0]->cat_name; ?></a>
 											</div>
-						        			<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+						        			<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php echo substr(the_title($before = '', $after = '', FALSE), 0, 60).'...'; ?></a></h2>
 						        			<div class="entry-summary">
 							        			<?php the_excerpt(); ?>
 						        			</div>
