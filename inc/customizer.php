@@ -145,6 +145,22 @@ function quizumba_customize_register( $wp_customize ) {
 			'settings' => 'quizumba_display_slider'
 	) );
 
+	// Comments FB
+	$wp_customize->add_section( 'quizumba_fb_comments', array(
+			'title'    => __( 'Comentários via Facebook', 'quizumba' ),
+			'priority' => 30,
+	) );
+	$wp_customize->add_setting( 'quizumba_display_fb_comments', array(
+			'capability' => 'edit_theme_options',
+	) );
+	
+	$wp_customize->add_control( 'quizumba_display_fb_comments', array(
+			'label'    => __( 'Exibe a caixa de comentários do Facebook', 'quizumba' ),
+			'section'  => 'quizumba_fb_comments',
+			'type'     => 'checkbox',
+			'settings' => 'quizumba_display_fb_comments'
+	) );
+
 
 }
 add_action( 'customize_register', 'quizumba_customize_register' );
