@@ -92,7 +92,8 @@ function quizumba_customize_register( $wp_customize ) {
     // Branding section: logo uploader
     $wp_customize->add_setting( 'quizumba_logo', array(
         'capability'  => 'edit_theme_options',
-        'sanitize_callback' => 'quizumba_get_customizer_logo_size'
+        'sanitize_callback' => 'quizumba_get_customizer_logo_size',
+    	//'transport'         => 'postMessage'
     ) );
         
     $wp_customize->add_control( new My_Customize_Image_Reloaded_Control( $wp_customize, 'quizumba_logo', array(
@@ -173,15 +174,17 @@ add_action( 'customize_register', 'quizumba_customize_register' );
  */
 function quizumba_get_customizer_logo_size( $value ) {
     global $wpdb;
-
-    if ( ! is_numeric( $value ) ) {
-        $attachment_id = $wpdb->get_var( $wpdb->prepare( "SELECT ID FROM {$wpdb->posts} WHERE post_type = 'attachment' AND guid = %s ORDER BY post_date DESC LIMIT 1;", $value ) );
-        if ( ! is_wp_error( $attachment_id ) && wp_attachment_is_image( $attachment_id ) )
-            $value = $attachment_id;
-    }
-
-    $image_attributes = wp_get_attachment_image_src( $value, 'archive' );
-    $value = $image_attributes[0];
+	if(!empty( $value) )
+	{
+	    if ( ! is_numeric( $value ) ) {
+	        $attachment_id = $wpdb->get_var( $wpdb->prepare( "SELECT ID FROM {$wpdb->posts} WHERE post_type = 'attachment' AND guid = %s ORDER BY post_date DESC LIMIT 1;", $value ) );
+	        if ( ! is_wp_error( $attachment_id ) && wp_attachment_is_image( $attachment_id ) )
+	            $value = $attachment_id;
+	    }
+	
+	    $image_attributes = wp_get_attachment_image_src( $value, 'archive' );
+	    $value = $image_attributes[0];
+	}
 
     return $value;
 }
@@ -250,6 +253,15 @@ function quizumba_customize_css() {
             .menu-toggle,
             .site-footer {
                 color: #000;
+            }
+        <?php endif; ?>
+        <?php
+        $header_image = get_theme_mod( 'header_image' );
+        if ( isset( $header_image ) && ! empty( $header_image ) && $header_image != "remove-header" ) : ?>
+            .site-branding {
+            	background-image: url( <?php echo $header_image; ?> );
+            	background-position: center center;
+    			min-height: 250px;
             }
         <?php endif; ?>
     </style> 
