@@ -18,6 +18,11 @@
 		                <?php dynamic_sidebar( 'sidebar-footer' ); ?>
 		        </div><!-- .widget-area--footer -->
 	        <?php endif; ?>
+	        <?php if ( is_active_sidebar( 'sidebar-footer-2' ) ) : ?>
+		        <div id="quaternary" class="widget-area widget-area--footer clear" role="complementary">
+		                <?php dynamic_sidebar( 'sidebar-footer-2' ); ?>
+		        </div><!-- .widget-area--footer-2 -->
+	        <?php endif; ?>
 			<div class="site-info">
 				<?php do_action( 'quizumba_credits' ); ?>
 				<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 'quizumba' ), 'WordPress' ); ?></a>

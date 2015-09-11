@@ -80,6 +80,16 @@ function quizumba_widgets_init() {
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
+	
+	register_sidebar( array(
+			'name'          => __( 'Footer Supporters Widget Area', 'quizumba' ),
+			'id'            => 'sidebar-footer-2',
+			'description'	=> __( 'The widget area for supporters info on the footer', 'quizumba' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+	) );
 }
 add_action( 'widgets_init', 'quizumba_widgets_init' );
 
