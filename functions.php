@@ -72,6 +72,16 @@ function quizumba_widgets_init() {
 	) );
 
 	register_sidebar( array(
+			'name'          => __( 'Home page sidebar', 'quizumba' ),
+			'id'            => 'sidebar-home',
+			'description'	=> __( 'The home page sidebar after highlights, if enabled', 'quizumba' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+	) );
+	
+	register_sidebar( array(
 		'name'          => __( 'Footer Widget Area', 'quizumba' ),
 		'id'            => 'sidebar-footer',
 		'description'	=> __( 'The widget area on the footer', 'quizumba' ),

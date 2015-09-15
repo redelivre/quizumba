@@ -860,6 +860,24 @@ object {
     max-height: 100px;
     position: relative;
 }
+
+.widget-area--home, .widget-area--home aside {
+    display: block;
+    max-height: 130px;
+    position: relative;
+    overflow: hidden;
+}
+
+.widget-area--home {
+	margin: 0 0 1.5em;
+}
+
+.widget-area--home img  {
+	display: block;
+    max-height: 130px;
+    position: relative;
+}
+
 /* ==========================================================================
    6.0 - Footer
    ========================================================================== */
@@ -912,6 +930,12 @@ object {
 		float: left;
 		width: 50%;
 	}
+	
+	/* Home Widget Area */
+	.widget-area--home .widget {
+		float: left;
+		width: 50%;
+	}
 }
 
 @media all and (min-width: 55em) {
@@ -959,6 +983,23 @@ object {
 	.widget-area--footer .widget:first-child:nth-last-child(4) ~ .widget {
 	    width: 25%;
 	}
+	
+	/* Home Widget Area */
+    .widget-area--home .widget:first-child:nth-last-child(2),
+	.widget-area--home .widget:first-child:nth-last-child(2) ~ .widget {
+	    width: 50%;
+	}
+
+	.widget-area--home .widget:first-child:nth-last-child(3),
+	.widget-area--home .widget:first-child:nth-last-child(3) ~ .widget {
+	    width: 33.333%;
+	}
+
+	.widget-area--home .widget:first-child:nth-last-child(4),
+	.widget-area--home .widget:first-child:nth-last-child(4) ~ .widget {
+	    width: 25%;
+	}
+	
 }
 
 

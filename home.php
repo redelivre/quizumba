@@ -66,7 +66,11 @@ get_header(); ?>
 			 		<div class="clearfix"> </div>
 			<?php
 			}?>
-	 		
+	 		<?php if ( is_active_sidebar( 'sidebar-home' ) ) : ?>
+		        <div id="sidebar-home" class="widget-area widget-area--home clear" role="complementary">
+		                <?php dynamic_sidebar( 'sidebar-home' ); ?>
+		        </div><!-- .widget-area--footer -->
+	        <?php endif; ?>
 	 		<?php 
 	 		if ( have_posts() ) : ?>
 				<div class="loop js-masonry">
