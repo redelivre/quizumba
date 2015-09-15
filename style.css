@@ -847,6 +847,10 @@ object {
 	width: 100%;
 }
 
+.widget-area--supporters, .widget-area--supporters aside, .widget-area--supporters img {
+	max-height: 100px;
+}
+
 /* ==========================================================================
    6.0 - Footer
    ========================================================================== */
@@ -856,6 +860,10 @@ object {
 	border-bottom: 1.5em solid #d6812c;
 	color: #fff;
 	font-size: 0.875em;
+}
+
+.site-info {
+	width: 100%;
 }
 
 /* ==========================================================================

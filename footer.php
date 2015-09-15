@@ -19,7 +19,7 @@
 		        </div><!-- .widget-area--footer -->
 	        <?php endif; ?>
 	        <?php if ( is_active_sidebar( 'sidebar-footer-2' ) ) : ?>
-		        <div id="quaternary" class="widget-area widget-area--footer clear" role="complementary">
+		        <div id="quaternary" class="widget-area widget-area--footer widget-area--supporters clear" role="complementary">
 		                <?php dynamic_sidebar( 'sidebar-footer-2' ); ?>
 		        </div><!-- .widget-area--footer-2 -->
 	        <?php endif; ?>
