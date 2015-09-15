@@ -30,7 +30,14 @@ get_header(); ?>
 								        	<div class="media slide cf">
 								    			<?php if ( has_post_thumbnail() ) : ?>
 									    			<div class="entry-image">
-									    			<?php the_post_thumbnail( 'slider' ); ?>
+									    				<?php
+									    					$post_thumbnail_id = get_post_thumbnail_id( get_the_ID() );
+									    					$thumb = wp_get_attachment_image_src($post_thumbnail_id, 'slider',false);
+									    					if(is_array($thumb))
+									    					{
+											    				?>
+											    				<div class="highlights-image" style="background-image: url(<?php echo $thumb[0]; ?>)" ></div><?php
+											    			}?>
 									    			</div>
 								    			<?php endif; ?>
 								        		<div class="bd">

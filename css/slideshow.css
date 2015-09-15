@@ -1,7 +1,7 @@
 
 /* pager */
 .cycle-pager { 
-    text-align: center; /*left: 960px;*/ width: 100%; z-index: 500; position: absolute; top: 275px; overflow: hidden;
+    text-align: center; /*left: 960px;*/ width: 100%; z-index: 500; position: absolute; top: 250px; overflow: hidden;
 }
 .cycle-pager span { 
     font-family: arial; font-size: 50px; width: 16px; height: 16px; 
@@ -17,3 +17,13 @@
 .cycle-prev:hover, .cycle-next:hover { opacity: .7; filter: alpha(opacity=70) }
 
 .disabled { opacity: .5; filter:alpha(opacity=50); }
+
+.cycle-slideshow {
+	height: 290px;
+}
+
+.highlights-image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 290px;
+}
