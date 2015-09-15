@@ -2,380 +2,446 @@
 # This file is distributed under the same license as the Quizumba package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2014-01-22 18:27-0300\n"
+"Project-Id-Version: Quizumba\n"
+"POT-Creation-Date: 2015-09-14 23:22-0300\n"
+"PO-Revision-Date: 2015-09-14 23:32-0300\n"
+"Last-Translator: Jacson Passold <jacson@ethymos.com.br>\n"
+"Language-Team: Redelivre <contato@redelivre.org>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: GlotPress/0.1\n"
-"Project-Id-Version: Quizumba\n"
-"POT-Creation-Date: \n"
-"Last-Translator: Eduardo Zulian <eduardozulian@gmail.com>\n"
-"Language-Team: \n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPath-1: .\n"
 
-#: 404.php:15
+#: ../content-none.php:13
+msgid "Nothing Found"
+msgstr "Nada encontrado"
+
+#: ../content-none.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Pronto para fazer sua primeira publicação? <a href=\"%1$s\">Comece aqui</a>."
+
+#: ../content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Desculpe, mas nada foi encontrado com esses termos. Por favor, tente "
+"novamente usando outras palavras-chave."
+
+#: ../content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Parece que o que você estava procurando não foi encontrado. Talvez uma "
+"pesquisa possa ajudar."
+
+#: ../functions.php:50
+msgid "Primary Menu"
+msgstr "Menu primário"
+
+#: ../functions.php:65
+msgid "Sidebar"
+msgstr "Barra lateral"
+
+#: ../functions.php:67
+msgid "The main sidebar"
+msgstr "A barra lateral principal"
+
+#: ../functions.php:75
+msgid "Home page widgets area"
+msgstr "Área para widgets da página principal/inicial"
+
+#: ../functions.php:77
+msgid "The home page widgets area below highlights, if highlights is enabled"
+msgstr ""
+"Área para widgets do lar, abaixo dos destaques, se os destaques estiverem "
+"ativos"
+
+#: ../functions.php:85
+msgid "Footer Widget Area"
+msgstr "Área de widgets no rodapé"
+
+#: ../functions.php:87
+msgid "The widget area on the footer"
+msgstr "A área de widgets no rodapé"
+
+#: ../functions.php:95
+msgid "Footer Supporters Widget Area"
+msgstr "Área para widgets no rodapé direcionada ao apoiadores"
+
+#: ../functions.php:97
+msgid "The widget area for supporters info on the footer"
+msgstr "Área para widgets no rodapé projetada para informações de apoiadores"
+
+#: ../searchform.php:10
+msgctxt "label"
+msgid "Search for:"
+msgstr "Pesquisar por:"
+
+#: ../searchform.php:11
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Pesquisar &hellip;"
+
+#: ../searchform.php:13
+msgctxt "submit button"
+msgid "Search"
+msgstr "Pesquisar"
+
+#: ../search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Resultados da pesquisa por: %s"
+
+#: ../page.php:32 ../single.php:31 ../tpl-contato.php:27
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: ../page.php:37 ../content-status.php:19 ../content-aside.php:19
+#: ../single.php:40 ../tpl-contato.php:28 ../content-quote.php:19
+#: ../content.php:25 ../content-video.php:25 ../content-gallery.php:34
+#: ../inc/template-tags.php:116 ../inc/template-tags.php:135
+msgid "Edit"
+msgstr "Editar"
+
+#: ../footer.php:28
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "Orgulhosamente criado com %s"
+
+#: ../footer.php:30
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr "Tema: %1$s por %2$s."
+
+#: ../tpl-contato.php:14
+msgid "Contact Us"
+msgstr "Contate-nos"
+
+#: ../header.php:63
+msgid "Menu"
+msgstr "Menu"
+
+#: ../header.php:64
+msgid "Skip to content"
+msgstr "Pular para o conteúdo"
+
+#: ../404.php:15
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Esta página não foi encontrada."
 
-#: 404.php:19
-msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
-msgstr "Parece que nada foi encontrado neste endereço. Que tal tentar um dos links abaixo ou, quem sabe, fazer uma pesquisa?"
+#: ../404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Parece que nada foi encontrado neste endereço. Que tal tentar um dos links "
+"abaixo ou, quem sabe, fazer uma pesquisa?"
 
-#: 404.php:27
+#: ../404.php:27
 msgid "Most Used Categories"
 msgstr "Categorias mais usadas"
 
-#: 404.php:44
+#: ../404.php:44
+#, php-format
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "Tente olhar nos arquivos mensais. %1$s"
 
-#: archive.php:27
+#: ../archive.php:27
+#, php-format
 msgid "Author: %s"
 msgstr "Autor: %s"
 
-#: archive.php:30
+#: ../archive.php:30
+#, php-format
 msgid "Day: %s"
 msgstr "Dia: %s"
 
-#: archive.php:33
+#: ../archive.php:33
+#, php-format
 msgid "Month: %s"
 msgstr "Mês: %s"
 
-#: archive.php:33
+#: ../archive.php:33
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr "F \\d\\e Y"
 
-#: archive.php:36
+#: ../archive.php:36
+#, php-format
 msgid "Year: %s"
 msgstr "Ano: %s"
 
-#: archive.php:36
+#: ../archive.php:36
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-#: archive.php:39
+#: ../archive.php:39
 msgid "Asides"
 msgstr "Notas"
 
-#: archive.php:42
+#: ../archive.php:42
 msgid "Galleries"
 msgstr "Galerias"
 
-#: archive.php:45
+#: ../archive.php:45
 msgid "Images"
 msgstr "Imagens"
 
-#: archive.php:48
+#: ../archive.php:48
 msgid "Videos"
 msgstr "Vídeos"
 
-#: archive.php:51
+#: ../archive.php:51
 msgid "Quotes"
 msgstr "Citações"
 
-#: archive.php:54
+#: ../archive.php:54
 msgid "Links"
 msgstr "Links"
 
-#: archive.php:57
+#: ../archive.php:57
 msgid "Statuses"
 msgstr "Status"
 
-#: archive.php:60
+#: ../archive.php:60
 msgid "Audios"
 msgstr "Áudios"
 
-#: archive.php:63
+#: ../archive.php:63
 msgid "Chats"
 msgstr "Conversas"
 
-#: archive.php:66
-#: sidebar.php:17
+#: ../archive.php:66 ../sidebar.php:17
 msgid "Archives"
 msgstr "Arquivos"
 
-#: comments.php:30
+#: ../comments.php:30
+#, php-format
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "Um comentário em &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s comentários em &ldquo;%2$s&rdquo;"
 
-#: comments.php:37
-#: comments.php:57
+#: ../comments.php:37 ../comments.php:57
 msgid "Comment navigation"
 msgstr "Navegação dos comentários"
 
-#: comments.php:38
-#: comments.php:58
+#: ../comments.php:38 ../comments.php:58
 msgid "&larr; Older Comments"
 msgstr "&larr; Comentários antigos"
 
-#: comments.php:39
-#: comments.php:59
+#: ../comments.php:39 ../comments.php:59
 msgid "Newer Comments &rarr;"
 msgstr "Comentários recentes &rarr;"
 
-#: comments.php:69
+#: ../comments.php:69
 msgid "Comments are closed."
 msgstr "Os comentários estão fechados."
 
-#: content-aside.php:19
-#: content-gallery.php:34
-#: content-quote.php:19
-#: content-status.php:19
-#: content-video.php:25
-#: content.php:25
-#: inc/template-tags.php:116
-#: inc/template-tags.php:135
-#: page.php:37
-#: single.php:40
-msgid "Edit"
-msgstr "Editar"
+#: ../home.php:59
+#, php-format
+msgid ""
+"To display your featured posts here go to the <a href=\"%s\">Post Edit Page</"
+"a> and check the \"Feature\" box. You can select how many posts you want, "
+"but use it wisely."
+msgstr ""
+"Mostre seus postes em destaque aqui, entre na <a href=\"%s\">Página de "
+"Edição de Postes</a> e marque a caixa de \"Destaque\". Você pode selecionar "
+"quantos destaques quiser, porém use com cautela"
 
-#: content-none.php:13
-msgid "Nothing Found"
-msgstr "Nada encontrado"
+#: ../sidebar.php:24
+msgid "Meta"
+msgstr "Meta"
 
-#: content-none.php:19
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "Pronto para fazer sua primeira publicação? <a href=\"%1$s\">Comece aqui</a>."
-
-#: content-none.php:23
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
-msgstr "Desculpe, mas nada foi encontrado com esses termos. Por favor, tente novamente usando outras palavras-chave."
-
-#: content-none.php:28
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
-msgstr "Parece que o que você estava procurando não foi encontrado. Talvez uma pesquisa possa ajudar."
-
-#: footer.php:23
-msgid "Proudly powered by %s"
-msgstr "Orgulhosamente criado com %s"
-
-#: footer.php:25
-msgid "Theme: %1$s by %2$s."
-msgstr "Tema: %1$s por %2$s."
-
-#: functions.php:54
-msgid "Primary Menu"
-msgstr "Menu primário"
-
-#: functions.php:69
-msgid "Sidebar"
-msgstr "Barra lateral"
-
-#: functions.php:71
-msgid "The main sidebar"
-msgstr "A barra lateral principal"
-
-#: functions.php:79
-msgid "Footer Widget Area"
-msgstr "Área de widgets no rodapé"
-
-#: functions.php:81
-msgid "The widget area on the footer"
-msgstr "A área de widgets no rodapé"
-
-#: header.php:63
-msgid "Menu"
-msgstr "Menu"
-
-#: header.php:64
-msgid "Skip to content"
-msgstr "Pular para o conteúdo"
-
-#: inc/customizer.php:80
-msgid "Display Header Text"
-msgstr "Exibir texto do cabeçalho"
-
-#: inc/customizer.php:88
-msgid "Branding"
-msgstr "Marca"
-
-#: inc/customizer.php:99
-msgid "Logo"
-msgstr "Logo"
-
-#: inc/customizer.php:112
-msgid "Link & Details Color"
-msgstr "Cor dos links e dos detalhes"
-
-#: inc/customizer.php:124
-msgid "Color Scheme"
-msgstr "Esquema de cores"
-
-#: inc/customizer.php:127
-msgid "Light"
-msgstr "Claro"
-
-#: inc/customizer.php:127
-msgid "Dark"
-msgstr "Escuro"
-
-#: inc/customizer.php:136
-msgid "Header"
-msgstr "Cabeçalho"
-
-#: inc/customizer.php:146
-#: inc/customizer.php:164
-msgid "Footer Background Image"
-msgstr "Imagem de fundo do rodapé"
-
-#: inc/customizer.php:154
-msgid "Footer"
-msgstr "Rodapé"
-
-#: inc/customizer.php:177
-msgid "Background Repeat"
-msgstr "Repetição do fundo"
-
-#: inc/customizer.php:181
-msgid "No Repeat"
-msgstr "Sem repetição"
-
-#: inc/customizer.php:182
-msgid "Tile"
-msgstr "Repetir"
-
-#: inc/customizer.php:183
-msgid "Tile Horizontally"
-msgstr "Repetir horizontalmente"
-
-#: inc/customizer.php:184
-msgid "Tile Vertically"
-msgstr "Repetir verticalmente"
-
-#: inc/customizer.php:193
-msgid "Background Position"
-msgstr "Posição do fundo"
-
-#: inc/customizer.php:197
-msgid "Left"
-msgstr "Esquerda"
-
-#: inc/customizer.php:198
-msgid "Center"
-msgstr "Centro"
-
-#: inc/customizer.php:199
-msgid "Right"
-msgstr "Direita"
-
-#: inc/customizer.php:208
-msgid "Background Attachment"
-msgstr "Fixação do fundo"
-
-#: inc/customizer.php:212
-msgid "Fixed"
-msgstr "Fixo"
-
-#: inc/customizer.php:213
-msgid "Scroll"
-msgstr "Rolar"
-
-#: inc/customizer.php:386
-msgid "Customize"
-msgstr "Personalizar"
-
-#: inc/extras.php:71
+#: ../inc/extras.php:71
+#, php-format
 msgid "Page %s"
 msgstr "Página %s"
 
-#: inc/template-tags.php:38
+#: ../inc/template-tags.php:38
 msgid "Previous page"
 msgstr "Página anterior"
 
-#: inc/template-tags.php:39
+#: ../inc/template-tags.php:39
 msgid "Next page"
 msgstr "Próxima página"
 
-#: inc/template-tags.php:43
+#: ../inc/template-tags.php:43
 msgid "Posts navigation"
 msgstr "Navegação dos posts"
 
-#: inc/template-tags.php:91
+#: ../inc/template-tags.php:91
 msgid "Post navigation"
 msgstr "Navegação do post"
 
-#: inc/template-tags.php:94
+#: ../inc/template-tags.php:94
 msgctxt "Previous post link"
 msgid "<span class=\"meta-nav\">&larr;</span> %title"
 msgstr "<span class=\"meta-nav\">&larr;</span> %title"
 
-#: inc/template-tags.php:95
+#: ../inc/template-tags.php:95
 msgctxt "Next post link"
 msgid "%title <span class=\"meta-nav\">&rarr;</span>"
 msgstr "%title <span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/template-tags.php:116
+#: ../inc/template-tags.php:116
 msgid "Pingback:"
 msgstr "Pingback:"
 
-#: inc/template-tags.php:126
+#: ../inc/template-tags.php:126
+#, php-format
 msgid "%s <span class=\"says\">says:</span>"
 msgstr "%s <span class=\"says\">escreveu:</span>"
 
-#: inc/template-tags.php:132
+#: ../inc/template-tags.php:132
+#, php-format
 msgctxt "1: date, 2: time"
 msgid "%1$s at %2$s"
 msgstr "%1$s às %2$s"
 
-#: inc/template-tags.php:139
+#: ../inc/template-tags.php:139
 msgid "Your comment is awaiting moderation."
 msgstr "Seu comentário está aguardando moderação."
 
-#: inc/template-tags.php:180
-msgid "<span class=\"posted-on icon-clock\">%1$s</span><span class=\"byline\"> by %2$s</span>"
-msgstr "<span class=\"posted-on icon-clock\">%1$s</span><span class=\"byline\"> por %2$s</span>"
+#: ../inc/template-tags.php:180
+#, php-format
+msgid ""
+"<span class=\"posted-on icon-clock\">%1$s</span><span class=\"byline\"> by "
+"%2$s</span>"
+msgstr ""
+"<span class=\"posted-on icon-clock\">%1$s</span><span class=\"byline\"> por "
+"%2$s</span>"
 
-#: inc/template-tags.php:273
-#: inc/template-tags.php:292
+#: ../inc/template-tags.php:274 ../inc/template-tags.php:293
 msgid ", "
 msgstr ", "
 
-#: page.php:32
-#: single.php:31
-msgid "Pages:"
-msgstr "Páginas:"
+#: ../inc/customizer.php:80
+msgid "Display Header Text"
+msgstr "Exibir texto do cabeçalho"
 
-#: search.php:16
-msgid "Search Results for: %s"
-msgstr "Resultados da pesquisa por: %s"
+#: ../inc/customizer.php:88
+msgid "Branding"
+msgstr "Marca"
 
-#: searchform.php:10
-msgctxt "label"
-msgid "Search for:"
-msgstr "Pesquisar por:"
+#: ../inc/customizer.php:100
+msgid "Logo"
+msgstr "Logo"
 
-#: searchform.php:11
-msgctxt "placeholder"
-msgid "Search &hellip;"
-msgstr "Pesquisar &hellip;"
+#: ../inc/customizer.php:113
+msgid "Link & Details Color"
+msgstr "Cor dos links e dos detalhes"
 
-#: searchform.php:13
-msgctxt "submit button"
-msgid "Search"
-msgstr "Pesquisar"
+#: ../inc/customizer.php:125
+msgid "Color Scheme"
+msgstr "Esquema de cores"
 
-#: sidebar.php:24
-msgid "Meta"
-msgstr "Meta"
+#: ../inc/customizer.php:128
+msgid "Light"
+msgstr "Claro"
 
-msgid "Quizumba (BETA)"
-msgstr "Quizumba (BETA)"
+#: ../inc/customizer.php:128
+msgid "Dark"
+msgstr "Escuro"
 
-msgid "http://underscores.me/"
-msgstr "http://underscores.me/"
+#: ../inc/customizer.php:135
+msgid "Slider"
+msgstr "Destaques rotativos"
 
-msgid "O tema de mídia livre, focado em organizações que possuam conteúdo vasto em diferentes formatos. Ainda em testes."
-msgstr "O tema de mídia livre, focado em organizações que possuam conteúdo vasto em diferentes formatos. Ainda em testes."
+#: ../inc/customizer.php:143
+msgid "Exibe o slider na página principal"
+msgstr "Exibe os destaques rotativos na página principal"
 
-msgid "Rede Livre"
-msgstr "Rede Livre"
+#: ../inc/customizer.php:151
+msgid "Comentários via Facebook"
+msgstr "Comentários via Facebook"
 
-msgid "http://quizumba.redelivre.org.br"
-msgstr "http://quizumba.redelivre.org.br"
+#: ../inc/customizer.php:159
+msgid "Exibe a caixa de comentários do Facebook"
+msgstr "Exibe a caixa de comentários do Facebook"
 
+#: ../inc/customizer.php:303
+msgid "Customize"
+msgstr "Personalizar"
+
+#~ msgid "Header"
+#~ msgstr "Cabeçalho"
+
+#~ msgid "Footer Background Image"
+#~ msgstr "Imagem de fundo do rodapé"
+
+#~ msgid "Footer"
+#~ msgstr "Rodapé"
+
+#~ msgid "Background Repeat"
+#~ msgstr "Repetição do fundo"
+
+#~ msgid "No Repeat"
+#~ msgstr "Sem repetição"
+
+#~ msgid "Tile"
+#~ msgstr "Repetir"
+
+#~ msgid "Tile Horizontally"
+#~ msgstr "Repetir horizontalmente"
+
+#~ msgid "Tile Vertically"
+#~ msgstr "Repetir verticalmente"
+
+#~ msgid "Background Position"
+#~ msgstr "Posição do fundo"
+
+#~ msgid "Left"
+#~ msgstr "Esquerda"
+
+#~ msgid "Center"
+#~ msgstr "Centro"
+
+#~ msgid "Right"
+#~ msgstr "Direita"
+
+#~ msgid "Background Attachment"
+#~ msgstr "Fixação do fundo"
+
+#~ msgid "Fixed"
+#~ msgstr "Fixo"
+
+#~ msgid "Scroll"
+#~ msgstr "Rolar"
+
+#~ msgid "Quizumba (BETA)"
+#~ msgstr "Quizumba (BETA)"
+
+#~ msgid "http://underscores.me/"
+#~ msgstr "http://underscores.me/"
+
+#~ msgid ""
+#~ "O tema de mídia livre, focado em organizações que possuam conteúdo vasto "
+#~ "em diferentes formatos. Ainda em testes."
+#~ msgstr ""
+#~ "O tema de mídia livre, focado em organizações que possuam conteúdo vasto "
+#~ "em diferentes formatos. Ainda em testes."
+
+#~ msgid "Rede Livre"
+#~ msgstr "Rede Livre"
+
+#~ msgid "http://quizumba.redelivre.org.br"
+#~ msgstr "http://quizumba.redelivre.org.br"

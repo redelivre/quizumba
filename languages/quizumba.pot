@@ -4,381 +4,364 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Quizumba (BETA) 0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/quizumba\n"
-"POT-Creation-Date: 2014-01-22 20:04:18+00:00\n"
+"POT-Creation-Date: 2015-09-14 23:33-0300\n"
+"PO-Revision-Date: 2015-09-14 23:33-0300\n"
+"Last-Translator: Jacson Passold <jacson@ethymos.com.br>\n"
+"Language-Team: Redelivre <contato@redelivre.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2010-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPath-1: .\n"
 
-#: 404.php:15
+#: ../content-none.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: ../content-none.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: ../content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: ../functions.php:50
+msgid "Primary Menu"
+msgstr ""
+
+#: ../functions.php:65
+msgid "Sidebar"
+msgstr ""
+
+#: ../functions.php:67
+msgid "The main sidebar"
+msgstr ""
+
+#: ../functions.php:75
+msgid "Home page widgets area"
+msgstr ""
+
+#: ../functions.php:77
+msgid "The home page widgets area below highlights, if highlights is enabled"
+msgstr ""
+
+#: ../functions.php:85
+msgid "Footer Widget Area"
+msgstr ""
+
+#: ../functions.php:87
+msgid "The widget area on the footer"
+msgstr ""
+
+#: ../functions.php:95
+msgid "Footer Supporters Widget Area"
+msgstr ""
+
+#: ../functions.php:97
+msgid "The widget area for supporters info on the footer"
+msgstr ""
+
+#: ../searchform.php:10
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: ../searchform.php:11
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: ../searchform.php:13
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: ../search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: ../page.php:32 ../single.php:31 ../tpl-contato.php:27
+msgid "Pages:"
+msgstr ""
+
+#: ../page.php:37 ../content-status.php:19 ../content-aside.php:19
+#: ../single.php:40 ../tpl-contato.php:28 ../content-quote.php:19
+#: ../content.php:25 ../content-video.php:25 ../content-gallery.php:34
+#: ../inc/template-tags.php:116 ../inc/template-tags.php:135
+msgid "Edit"
+msgstr ""
+
+#: ../footer.php:28
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: ../footer.php:30
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: ../tpl-contato.php:14
+msgid "Contact Us"
+msgstr ""
+
+#: ../header.php:63
+msgid "Menu"
+msgstr ""
+
+#: ../header.php:64
+msgid "Skip to content"
+msgstr ""
+
+#: ../404.php:15
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:19
+#: ../404.php:19
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
 
-#: 404.php:27
+#: ../404.php:27
 msgid "Most Used Categories"
 msgstr ""
 
-#. translators: %1$s: smiley
-#: 404.php:44
+#: ../404.php:44
+#, php-format
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: archive.php:27
+#: ../archive.php:27
+#, php-format
 msgid "Author: %s"
 msgstr ""
 
-#: archive.php:30
+#: ../archive.php:30
+#, php-format
 msgid "Day: %s"
 msgstr ""
 
-#: archive.php:33
+#: ../archive.php:33
+#, php-format
 msgid "Month: %s"
 msgstr ""
 
-#: archive.php:33
+#: ../archive.php:33
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: archive.php:36
+#: ../archive.php:36
+#, php-format
 msgid "Year: %s"
 msgstr ""
 
-#: archive.php:36
+#: ../archive.php:36
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: archive.php:39
+#: ../archive.php:39
 msgid "Asides"
 msgstr ""
 
-#: archive.php:42
+#: ../archive.php:42
 msgid "Galleries"
 msgstr ""
 
-#: archive.php:45
+#: ../archive.php:45
 msgid "Images"
 msgstr ""
 
-#: archive.php:48
+#: ../archive.php:48
 msgid "Videos"
 msgstr ""
 
-#: archive.php:51
+#: ../archive.php:51
 msgid "Quotes"
 msgstr ""
 
-#: archive.php:54
+#: ../archive.php:54
 msgid "Links"
 msgstr ""
 
-#: archive.php:57
+#: ../archive.php:57
 msgid "Statuses"
 msgstr ""
 
-#: archive.php:60
+#: ../archive.php:60
 msgid "Audios"
 msgstr ""
 
-#: archive.php:63
+#: ../archive.php:63
 msgid "Chats"
 msgstr ""
 
-#: archive.php:66 sidebar.php:17
+#: ../archive.php:66 ../sidebar.php:17
 msgid "Archives"
 msgstr ""
 
-#: comments.php:30
+#: ../comments.php:30
+#, php-format
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:37 comments.php:57
+#: ../comments.php:37 ../comments.php:57
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:38 comments.php:58
+#: ../comments.php:38 ../comments.php:58
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: comments.php:39 comments.php:59
+#: ../comments.php:39 ../comments.php:59
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:69
+#: ../comments.php:69
 msgid "Comments are closed."
 msgstr ""
 
-#: content-aside.php:19 content-gallery.php:34 content-quote.php:19
-#: content-status.php:19 content-video.php:25 content.php:25
-#: inc/template-tags.php:116 inc/template-tags.php:135 page.php:37
-#: single.php:40
-msgid "Edit"
-msgstr ""
-
-#: content-none.php:13
-msgid "Nothing Found"
-msgstr ""
-
-#: content-none.php:19
+#: ../home.php:59
+#, php-format
 msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+"To display your featured posts here go to the <a href=\"%s\">Post Edit Page</"
+"a> and check the \"Feature\" box. You can select how many posts you want, "
+"but use it wisely."
 msgstr ""
 
-#: content-none.php:23
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
+#: ../sidebar.php:24
+msgid "Meta"
 msgstr ""
 
-#: content-none.php:28
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr ""
-
-#: footer.php:23
-msgid "Proudly powered by %s"
-msgstr ""
-
-#: footer.php:25
-msgid "Theme: %1$s by %2$s."
-msgstr ""
-
-#: functions.php:54
-msgid "Primary Menu"
-msgstr ""
-
-#: functions.php:69
-msgid "Sidebar"
-msgstr ""
-
-#: functions.php:71
-msgid "The main sidebar"
-msgstr ""
-
-#: functions.php:79
-msgid "Footer Widget Area"
-msgstr ""
-
-#: functions.php:81
-msgid "The widget area on the footer"
-msgstr ""
-
-#: header.php:63
-msgid "Menu"
-msgstr ""
-
-#: header.php:64
-msgid "Skip to content"
-msgstr ""
-
-#: inc/customizer.php:80
-msgid "Display Header Text"
-msgstr ""
-
-#: inc/customizer.php:88
-msgid "Branding"
-msgstr ""
-
-#: inc/customizer.php:99
-msgid "Logo"
-msgstr ""
-
-#: inc/customizer.php:112
-msgid "Link & Details Color"
-msgstr ""
-
-#: inc/customizer.php:124
-msgid "Color Scheme"
-msgstr ""
-
-#: inc/customizer.php:127
-msgid "Light"
-msgstr ""
-
-#: inc/customizer.php:127
-msgid "Dark"
-msgstr ""
-
-#: inc/customizer.php:136
-msgid "Header"
-msgstr ""
-
-#: inc/customizer.php:146 inc/customizer.php:164
-msgid "Footer Background Image"
-msgstr ""
-
-#: inc/customizer.php:154
-msgid "Footer"
-msgstr ""
-
-#: inc/customizer.php:177
-msgid "Background Repeat"
-msgstr ""
-
-#: inc/customizer.php:181
-msgid "No Repeat"
-msgstr ""
-
-#: inc/customizer.php:182
-msgid "Tile"
-msgstr ""
-
-#: inc/customizer.php:183
-msgid "Tile Horizontally"
-msgstr ""
-
-#: inc/customizer.php:184
-msgid "Tile Vertically"
-msgstr ""
-
-#: inc/customizer.php:193
-msgid "Background Position"
-msgstr ""
-
-#: inc/customizer.php:197
-msgid "Left"
-msgstr ""
-
-#: inc/customizer.php:198
-msgid "Center"
-msgstr ""
-
-#: inc/customizer.php:199
-msgid "Right"
-msgstr ""
-
-#: inc/customizer.php:208
-msgid "Background Attachment"
-msgstr ""
-
-#: inc/customizer.php:212
-msgid "Fixed"
-msgstr ""
-
-#: inc/customizer.php:213
-msgid "Scroll"
-msgstr ""
-
-#: inc/customizer.php:386
-msgid "Customize"
-msgstr ""
-
-#: inc/extras.php:71
+#: ../inc/extras.php:71
+#, php-format
 msgid "Page %s"
 msgstr ""
 
-#: inc/template-tags.php:38
+#: ../inc/template-tags.php:38
 msgid "Previous page"
 msgstr ""
 
-#: inc/template-tags.php:39
+#: ../inc/template-tags.php:39
 msgid "Next page"
 msgstr ""
 
-#: inc/template-tags.php:43
+#: ../inc/template-tags.php:43
 msgid "Posts navigation"
 msgstr ""
 
-#: inc/template-tags.php:91
+#: ../inc/template-tags.php:91
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:94
+#: ../inc/template-tags.php:94
 msgctxt "Previous post link"
 msgid "<span class=\"meta-nav\">&larr;</span> %title"
 msgstr ""
 
-#: inc/template-tags.php:95
+#: ../inc/template-tags.php:95
 msgctxt "Next post link"
 msgid "%title <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/template-tags.php:116
+#: ../inc/template-tags.php:116
 msgid "Pingback:"
 msgstr ""
 
-#: inc/template-tags.php:126
+#: ../inc/template-tags.php:126
+#, php-format
 msgid "%s <span class=\"says\">says:</span>"
 msgstr ""
 
-#: inc/template-tags.php:132
+#: ../inc/template-tags.php:132
+#, php-format
 msgctxt "1: date, 2: time"
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/template-tags.php:139
+#: ../inc/template-tags.php:139
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/template-tags.php:180
+#: ../inc/template-tags.php:180
+#, php-format
 msgid ""
 "<span class=\"posted-on icon-clock\">%1$s</span><span class=\"byline\"> by "
 "%2$s</span>"
 msgstr ""
 
-#. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:273 inc/template-tags.php:292
+#: ../inc/template-tags.php:274 ../inc/template-tags.php:293
 msgid ", "
 msgstr ""
 
-#: page.php:32 single.php:31
-msgid "Pages:"
+#: ../inc/customizer.php:80
+msgid "Display Header Text"
 msgstr ""
 
-#: search.php:16
-msgid "Search Results for: %s"
+#: ../inc/customizer.php:88
+msgid "Branding"
 msgstr ""
 
-#: searchform.php:10
-msgctxt "label"
-msgid "Search for:"
+#: ../inc/customizer.php:100
+msgid "Logo"
 msgstr ""
 
-#: searchform.php:11
-msgctxt "placeholder"
-msgid "Search &hellip;"
+#: ../inc/customizer.php:113
+msgid "Link & Details Color"
 msgstr ""
 
-#: searchform.php:13
-msgctxt "submit button"
-msgid "Search"
+#: ../inc/customizer.php:125
+msgid "Color Scheme"
 msgstr ""
 
-#: sidebar.php:24
-msgid "Meta"
+#: ../inc/customizer.php:128
+msgid "Light"
 msgstr ""
 
-#. Theme Name of the plugin/theme
-msgid "Quizumba (BETA)"
+#: ../inc/customizer.php:128
+msgid "Dark"
 msgstr ""
 
-#. Theme URI of the plugin/theme
-msgid "http://underscores.me/"
+#: ../inc/customizer.php:135
+msgid "Slider"
 msgstr ""
 
-#. Description of the plugin/theme
-msgid ""
-"O tema de mídia livre, focado em organizações que possuam conteúdo vasto em "
-"diferentes formatos. Ainda em testes."
+#: ../inc/customizer.php:143
+msgid "Exibe o slider na página principal"
 msgstr ""
 
-#. Author of the plugin/theme
-msgid "Rede Livre"
+#: ../inc/customizer.php:151
+msgid "Comentários via Facebook"
 msgstr ""
 
-#. Author URI of the plugin/theme
-msgid "http://quizumba.redelivre.org.br"
+#: ../inc/customizer.php:159
+msgid "Exibe a caixa de comentários do Facebook"
+msgstr ""
+
+#: ../inc/customizer.php:303
+msgid "Customize"
 msgstr ""
