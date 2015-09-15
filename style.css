@@ -847,10 +847,15 @@ object {
 	width: 100%;
 }
 
-.widget-area--supporters, .widget-area--supporters aside, .widget-area--supporters img {
+.widget-area--supporters, .widget-area--supporters aside {
 	max-height: 100px;
+	overflow: hidden;
 }
-
+.widget-area--supporters img  {
+	display: block;
+    max-height: 100px;
+    position: relative;
+}
 /* ==========================================================================
    6.0 - Footer
    ========================================================================== */
@@ -863,7 +868,11 @@ object {
 }
 
 .site-info {
-	width: 100%;
+	display: block;
+    float: left;
+    position: relative;
+    text-align: center;
+    width: 100%;
 }
 
 /* ==========================================================================
