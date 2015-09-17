@@ -34,3 +34,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.highlights .entry-summary img {
+    max-height: 190px;
+}
