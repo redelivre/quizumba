@@ -42,7 +42,11 @@
 				<?php endif; ?>
 			</div>
 		</div><!-- .site-complementary -->
-
+		<div class="head-search-form-entry">
+			<div class="container">
+				<?php get_search_form(); ?>
+			</div>
+		</div>
 		<div class="site-branding">
 			<div class="container container--padding">
 				<?php
