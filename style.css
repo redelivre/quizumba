@@ -411,7 +411,7 @@ a:active {
 .icon-google:before { content: '\e80F'; }
 .icon-menu:before { content: '\e810'; }
 .icon-edit:before { content: '\e811'; }
-.icon-search:before { content: '\e800'; }
+.icon-search:before { content: '\e812'; }
 
 /* Clearing */
 .clear:before,
@@ -564,7 +564,7 @@ a:active {
 }
 .site-header #searchform .icon-search {
 	/*margin-top: -0.875em;*/
-	left: 4.25em;
+	left: 0.75em;
 	pointer-events: none;
 	position: absolute;
 	top: 16%;
@@ -582,7 +582,7 @@ a:active {
     position: relative;
 }
 
-#searchsubmit {
+.site-header #searchform #searchsubmit, .site-header #searchform .assistive-text {
 	display: none;
 }
 
