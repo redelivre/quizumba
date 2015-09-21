@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Quizumba\n"
-"POT-Creation-Date: 2015-09-14 23:22-0300\n"
-"PO-Revision-Date: 2015-09-14 23:32-0300\n"
+"POT-Creation-Date: 2015-09-21 12:24-0300\n"
+"PO-Revision-Date: 2015-09-21 12:25-0300\n"
 "Last-Translator: Jacson Passold <jacson@ethymos.com.br>\n"
 "Language-Team: Redelivre <contato@redelivre.org>\n"
 "Language: pt_BR\n"
@@ -23,101 +23,28 @@ msgstr ""
 "X-Poedit-SearchPath-0: ..\n"
 "X-Poedit-SearchPath-1: .\n"
 
-#: ../content-none.php:13
-msgid "Nothing Found"
-msgstr "Nada encontrado"
+#: ../tpl-contato.php:14
+msgid "Contact Us"
+msgstr "Contate-nos"
 
-#: ../content-none.php:19
-#, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-"Pronto para fazer sua primeira publicação? <a href=\"%1$s\">Comece aqui</a>."
-
-#: ../content-none.php:23
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-"Desculpe, mas nada foi encontrado com esses termos. Por favor, tente "
-"novamente usando outras palavras-chave."
-
-#: ../content-none.php:28
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr ""
-"Parece que o que você estava procurando não foi encontrado. Talvez uma "
-"pesquisa possa ajudar."
-
-#: ../functions.php:50
-msgid "Primary Menu"
-msgstr "Menu primário"
-
-#: ../functions.php:65
-msgid "Sidebar"
-msgstr "Barra lateral"
-
-#: ../functions.php:67
-msgid "The main sidebar"
-msgstr "A barra lateral principal"
-
-#: ../functions.php:75
-msgid "Home page widgets area"
-msgstr "Área para widgets da página principal/inicial"
-
-#: ../functions.php:77
-msgid "The home page widgets area below highlights, if highlights is enabled"
-msgstr ""
-"Área para widgets do lar, abaixo dos destaques, se os destaques estiverem "
-"ativos"
-
-#: ../functions.php:85
-msgid "Footer Widget Area"
-msgstr "Área de widgets no rodapé"
-
-#: ../functions.php:87
-msgid "The widget area on the footer"
-msgstr "A área de widgets no rodapé"
-
-#: ../functions.php:95
-msgid "Footer Supporters Widget Area"
-msgstr "Área para widgets no rodapé direcionada ao apoiadores"
-
-#: ../functions.php:97
-msgid "The widget area for supporters info on the footer"
-msgstr "Área para widgets no rodapé projetada para informações de apoiadores"
-
-#: ../searchform.php:10
-msgctxt "label"
-msgid "Search for:"
-msgstr "Pesquisar por:"
-
-#: ../searchform.php:11
-msgctxt "placeholder"
-msgid "Search &hellip;"
-msgstr "Pesquisar &hellip;"
-
-#: ../searchform.php:13
-msgctxt "submit button"
-msgid "Search"
-msgstr "Pesquisar"
-
-#: ../search.php:16
-#, php-format
-msgid "Search Results for: %s"
-msgstr "Resultados da pesquisa por: %s"
-
-#: ../page.php:32 ../single.php:31 ../tpl-contato.php:27
+#: ../tpl-contato.php:27 ../page.php:32 ../single.php:31
 msgid "Pages:"
 msgstr "Páginas:"
 
-#: ../page.php:37 ../content-status.php:19 ../content-aside.php:19
-#: ../single.php:40 ../tpl-contato.php:28 ../content-quote.php:19
-#: ../content.php:25 ../content-video.php:25 ../content-gallery.php:34
+#: ../tpl-contato.php:28 ../page.php:37 ../content-quote.php:19
+#: ../content-aside.php:19 ../content-status.php:19 ../single.php:40
+#: ../content.php:25 ../content-gallery.php:34 ../content-video.php:25
 #: ../inc/template-tags.php:116 ../inc/template-tags.php:135
 msgid "Edit"
 msgstr "Editar"
+
+#: ../searchform.php:12 ../searchform.php:14
+msgid "Search"
+msgstr "Pesquisar"
+
+#: ../searchform.php:13
+msgid "Type your search and press enter"
+msgstr "Digite sua pesquisa e aperte enter"
 
 #: ../footer.php:28
 #, php-format
@@ -128,39 +55,6 @@ msgstr "Orgulhosamente criado com %s"
 #, php-format
 msgid "Theme: %1$s by %2$s."
 msgstr "Tema: %1$s por %2$s."
-
-#: ../tpl-contato.php:14
-msgid "Contact Us"
-msgstr "Contate-nos"
-
-#: ../header.php:63
-msgid "Menu"
-msgstr "Menu"
-
-#: ../header.php:64
-msgid "Skip to content"
-msgstr "Pular para o conteúdo"
-
-#: ../404.php:15
-msgid "Oops! That page can&rsquo;t be found."
-msgstr "Esta página não foi encontrada."
-
-#: ../404.php:19
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-"Parece que nada foi encontrado neste endereço. Que tal tentar um dos links "
-"abaixo ou, quem sabe, fazer uma pesquisa?"
-
-#: ../404.php:27
-msgid "Most Used Categories"
-msgstr "Categorias mais usadas"
-
-#: ../404.php:44
-#, php-format
-msgid "Try looking in the monthly archives. %1$s"
-msgstr "Tente olhar nos arquivos mensais. %1$s"
 
 #: ../archive.php:27
 #, php-format
@@ -232,6 +126,93 @@ msgstr "Conversas"
 msgid "Archives"
 msgstr "Arquivos"
 
+#: ../header.php:67
+msgid "Menu"
+msgstr "Menu"
+
+#: ../header.php:68
+msgid "Skip to content"
+msgstr "Pular para o conteúdo"
+
+#: ../functions.php:50
+msgid "Primary Menu"
+msgstr "Menu primário"
+
+#: ../functions.php:65
+msgid "Sidebar"
+msgstr "Barra lateral"
+
+#: ../functions.php:67
+msgid "The main sidebar"
+msgstr "A barra lateral principal"
+
+#: ../functions.php:75
+msgid "Home page widgets area"
+msgstr "Área para widgets da página principal/inicial"
+
+#: ../functions.php:77
+msgid "The home page widgets area below highlights, if highlights is enabled"
+msgstr ""
+"Área para widgets do lar, abaixo dos destaques, se os destaques estiverem "
+"ativos"
+
+#: ../functions.php:85
+msgid "Footer Widget Area"
+msgstr "Área de widgets no rodapé"
+
+#: ../functions.php:87
+msgid "The widget area on the footer"
+msgstr "A área de widgets no rodapé"
+
+#: ../functions.php:95
+msgid "Footer Supporters Widget Area"
+msgstr "Área para widgets no rodapé direcionada ao apoiadores"
+
+#: ../functions.php:97
+msgid "The widget area for supporters info on the footer"
+msgstr "Área para widgets no rodapé projetada para informações de apoiadores"
+
+#: ../home.php:66
+#, php-format
+msgid ""
+"To display your featured posts here go to the <a href=\"%s\">Post Edit Page</"
+"a> and check the \"Feature\" box. You can select how many posts you want, "
+"but use it wisely."
+msgstr ""
+"Mostre seus postes em destaque aqui, entre na <a href=\"%s\">Página de "
+"Edição de Postes</a> e marque a caixa de \"Destaque\". Você pode selecionar "
+"quantos destaques quiser, porém use com cautela"
+
+#: ../404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Esta página não foi encontrada."
+
+#: ../404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Parece que nada foi encontrado neste endereço. Que tal tentar um dos links "
+"abaixo ou, quem sabe, fazer uma pesquisa?"
+
+#: ../404.php:27
+msgid "Most Used Categories"
+msgstr "Categorias mais usadas"
+
+#: ../404.php:44
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Tente olhar nos arquivos mensais. %1$s"
+
+#: ../sidebar.php:24
+msgid "Meta"
+msgstr "Meta"
+
+#: ../search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Resultados da pesquisa por: %s"
+
 #: ../comments.php:30
 #, php-format
 msgctxt "comments title"
@@ -256,25 +237,80 @@ msgstr "Comentários recentes &rarr;"
 msgid "Comments are closed."
 msgstr "Os comentários estão fechados."
 
-#: ../home.php:59
+#: ../content-none.php:13
+msgid "Nothing Found"
+msgstr "Nada encontrado"
+
+#: ../content-none.php:19
 #, php-format
 msgid ""
-"To display your featured posts here go to the <a href=\"%s\">Post Edit Page</"
-"a> and check the \"Feature\" box. You can select how many posts you want, "
-"but use it wisely."
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Mostre seus postes em destaque aqui, entre na <a href=\"%s\">Página de "
-"Edição de Postes</a> e marque a caixa de \"Destaque\". Você pode selecionar "
-"quantos destaques quiser, porém use com cautela"
+"Pronto para fazer sua primeira publicação? <a href=\"%1$s\">Comece aqui</a>."
 
-#: ../sidebar.php:24
-msgid "Meta"
-msgstr "Meta"
+#: ../content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Desculpe, mas nada foi encontrado com esses termos. Por favor, tente "
+"novamente usando outras palavras-chave."
 
-#: ../inc/extras.php:71
-#, php-format
-msgid "Page %s"
-msgstr "Página %s"
+#: ../content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Parece que o que você estava procurando não foi encontrado. Talvez uma "
+"pesquisa possa ajudar."
+
+#: ../inc/customizer.php:80
+msgid "Display Header Text"
+msgstr "Exibir texto do cabeçalho"
+
+#: ../inc/customizer.php:88
+msgid "Branding"
+msgstr "Marca"
+
+#: ../inc/customizer.php:100
+msgid "Logo"
+msgstr "Logo"
+
+#: ../inc/customizer.php:113
+msgid "Link & Details Color"
+msgstr "Cor dos links e dos detalhes"
+
+#: ../inc/customizer.php:125
+msgid "Color Scheme"
+msgstr "Esquema de cores"
+
+#: ../inc/customizer.php:128
+msgid "Light"
+msgstr "Claro"
+
+#: ../inc/customizer.php:128
+msgid "Dark"
+msgstr "Escuro"
+
+#: ../inc/customizer.php:135
+msgid "Slider"
+msgstr "Destaques rotativos"
+
+#: ../inc/customizer.php:143
+msgid "Exibe o slider na página principal"
+msgstr "Exibe os destaques rotativos na página principal"
+
+#: ../inc/customizer.php:151
+msgid "Comentários via Facebook"
+msgstr "Comentários via Facebook"
+
+#: ../inc/customizer.php:159
+msgid "Exibe a caixa de comentários do Facebook"
+msgstr "Exibe a caixa de comentários do Facebook"
+
+#: ../inc/customizer.php:304
+msgid "Customize"
+msgstr "Personalizar"
 
 #: ../inc/template-tags.php:38
 msgid "Previous page"
@@ -334,53 +370,18 @@ msgstr ""
 msgid ", "
 msgstr ", "
 
-#: ../inc/customizer.php:80
-msgid "Display Header Text"
-msgstr "Exibir texto do cabeçalho"
+#: ../inc/extras.php:71
+#, php-format
+msgid "Page %s"
+msgstr "Página %s"
 
-#: ../inc/customizer.php:88
-msgid "Branding"
-msgstr "Marca"
+#~ msgctxt "label"
+#~ msgid "Search for:"
+#~ msgstr "Pesquisar por:"
 
-#: ../inc/customizer.php:100
-msgid "Logo"
-msgstr "Logo"
-
-#: ../inc/customizer.php:113
-msgid "Link & Details Color"
-msgstr "Cor dos links e dos detalhes"
-
-#: ../inc/customizer.php:125
-msgid "Color Scheme"
-msgstr "Esquema de cores"
-
-#: ../inc/customizer.php:128
-msgid "Light"
-msgstr "Claro"
-
-#: ../inc/customizer.php:128
-msgid "Dark"
-msgstr "Escuro"
-
-#: ../inc/customizer.php:135
-msgid "Slider"
-msgstr "Destaques rotativos"
-
-#: ../inc/customizer.php:143
-msgid "Exibe o slider na página principal"
-msgstr "Exibe os destaques rotativos na página principal"
-
-#: ../inc/customizer.php:151
-msgid "Comentários via Facebook"
-msgstr "Comentários via Facebook"
-
-#: ../inc/customizer.php:159
-msgid "Exibe a caixa de comentários do Facebook"
-msgstr "Exibe a caixa de comentários do Facebook"
-
-#: ../inc/customizer.php:303
-msgid "Customize"
-msgstr "Personalizar"
+#~ msgctxt "placeholder"
+#~ msgid "Search &hellip;"
+#~ msgstr "Pesquisar &hellip;"
 
 #~ msgid "Header"
 #~ msgstr "Cabeçalho"
