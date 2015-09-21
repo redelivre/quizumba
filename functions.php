@@ -218,3 +218,15 @@ function quizumba_fb_opengraph() {
 }
 add_action( 'wp_head', 'quizumba_fb_opengraph' );
 
+
+function quizumba_hide_sidebar()
+{ //TODO better way todo that
+?>
+	<style>
+		#secondary { display: none; }
+		.content-area { width: 100%; }
+	</style>
+<?php
+}
+add_shortcode( 'hide-sidebar', 'quizumba_hide_sidebar' );
+
