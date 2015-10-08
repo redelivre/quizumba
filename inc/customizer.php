@@ -232,7 +232,7 @@ function quizumba_customize_css() {
 
             .main-navigation,
             .main-navigation .children,
-            .main-navigation ul ul.submenu,
+            .main-navigation ul ul,
             .site-header #searchform #s {
                 background-color: <?php echo $link_color; ?>
             }
