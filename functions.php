@@ -150,6 +150,13 @@ function quizumba_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'quizumba_scripts' );
 
+function quizumba_the_excerpt($content)
+{
+	$content = preg_replace("/<img[^>]+\>/i", "", $content);
+	return $content;
+}
+add_filter('the_excerpt', 'quizumba_the_excerpt');
+
 /**
  * Implement the Custom Header feature.
  */
