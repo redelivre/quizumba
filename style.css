@@ -663,6 +663,11 @@ a:active {
 
 .sub-menu{
 	background: #f78d02;
+	border: #000 solid 1px;
+}
+
+.main-navigation li:hover > a {
+    color: #ebebeb;
 }
 
 /* ==========================================================================
