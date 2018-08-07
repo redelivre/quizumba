@@ -1,6 +1,12 @@
 # Quizumba
 O tema de mídia livre, focado em organizações que possuam conteúdo vasto em diferentes formatos.
 
+![GitHub](https://img.shields.io/github/license/redelivre/quizumba.svg)
+[![chatroom icon](https://patrolavia.github.io/telegram-badge/chat.png)](https://t.me/joinchat/AHZmBhAkX_efR9za0V_J1A)
+
+# Screenshot
+![Screenshot](./screenshot.png)
+
 Alguns recursos:
 * Design responsivo; o site se comporta suavemente em diferentes dispositivos dos mais variados tamanhos e resoluções
 * Possibilidade de adicionar logo personalizada
